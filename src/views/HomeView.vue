@@ -1,18 +1,17 @@
 <template>
-  <HelloWorld />
+  <div class="mt-10 text-center">
+    <h2> Welcome to SpiderTech</h2>
+  </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import {defineComponent} from 'vue';
 
 // Components
-import HelloWorld from '../components/HelloWorld.vue';
 
 export default defineComponent({
   name: 'HomeView',
 
-  components: {
-    HelloWorld,
-  },
+  components: {},
 });
 </script>
