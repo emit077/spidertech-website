@@ -4,7 +4,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/HomeView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Homeview1.vue')
   },
 
 ]
