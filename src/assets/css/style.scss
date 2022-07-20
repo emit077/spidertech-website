@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*, body {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+// setting the default font
+
+$font-family: "Poppins";
+.v-application {
+  [class*="text-"] {
+    color: #36405a;
+    font-family: $font-family, sans-serif !important;
+  }
+
+  font-family: $font-family, sans-serif !important;
+}
+
+.background-bottom-cover {
+  background-position: bottom;
+  background-size: cover;
+}
+
+.background-top-cover {
+  background-position: top;
+  background-size: cover;
+  margin-top: -1px;
+}

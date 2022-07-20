@@ -4,21 +4,18 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 import {loadFonts} from './plugins/webfontloader'
-import Vue3Lottie from 'vue3-lottie'
-import 'vue3-lottie/dist/style.css'
 
-import "splitting/dist/splitting.css";
-import "splitting/dist/splitting-cells.css";
-import Splitting from "splitting";
-
-
+import rules from "@/helper/rules";
+import urls from "@/helper/urls";
 
 loadFonts()
 
-createApp(App)
-  .use(router)
-  .use(store)
-  .use(vuetify)
-  .use(Vue3Lottie)
-  .use(Splitting)
-  .mount('#app')
+
+const app = createApp(App)
+app.config.globalProperties.$rules = rules
+app.config.globalProperties.$urls = urls
+
+app.use(router)
+app.use(store)
+app.use(vuetify)
+app.mount('#app')
