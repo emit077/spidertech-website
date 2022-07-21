@@ -11,10 +11,7 @@
 @import "assets/css/style.scss";
 @import "assets/css/animation.scss";
 
-.app-padding {
-  padding-left: 14%;
-  padding-right: 14%;
-}
+
 
 </style>
 

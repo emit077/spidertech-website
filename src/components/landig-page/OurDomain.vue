@@ -1,6 +1,6 @@
 <template>
   <div class="py-15 app-padding our-domain-section">
-    <v-row align="center" justify="center" class="mb-10">
+    <v-row align="center" justify="center" class="mb-10" no-gutters>
       <v-col sm="12" cols="13" class="justify-center text-center">
         <p class="text-h4 font-weight-bold text-primary px-10">
           We know you've got an amazing disruptive idea

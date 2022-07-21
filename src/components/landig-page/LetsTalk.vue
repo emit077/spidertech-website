@@ -1,10 +1,13 @@
 <template>
   <div class="py-15 app-padding contact-section" :style="{ backgroundImage : 'url(' + background_image + ')' }">
-    <v-row align="center" justify="center" class="my-10">
-      <v-col sm="6" cols="13" class="text-right">
-        <p class="text-secondary2 text-h6 font-weight-bold mb-5">Want to build your digital Product?</p>
-        <h1 class="text-h2 font-weight-bold text-primary-darken-2"> Let's Talk </h1>
-        <p class="text-h6 mt-2 text-secondary font-weight-regular mb-5">
+    <v-row align="center" justify="center" class="my-10" no-gutters>
+      <v-col sm="6" cols="13" :class="$vuetify.display.mobile?'text-center':'text-right'">
+        <p class="text-secondary2 font-weight-bold mb-5" :class="$vuetify.display.mobile?'text-subtitle-1':'text-h6'">
+          Want to build your digital Product?</p>
+        <h1 class="font-weight-bold text-primary-darken-2" :class="$vuetify.display.mobile?'text-h4 ':'text-h2'"> Let's
+          Talk </h1>
+        <p class=" mt-2 text-secondary font-weight-regular mb-5"
+           :class="$vuetify.display.mobile?'text-subtitle-1':'text-h6'">
           Whether you need a full product, consultation, tech investments
           or an extended team, our expert
           will help you find the best solutions.
@@ -12,7 +15,7 @@
       </v-col>
       <v-col sm="6" cols="13" class="text-right">
         <v-card class="mx-auto contact-card" max-width="400" elevation="10">
-          <v-card-text class="px-10 py-8">
+          <v-card-text :class="$vuetify.display.mobile?'px-6 py-8':'px-10 py-8'">
             <v-form ref="contact_form" v-model="valid" lazy-validation @submit.prevent="submitQueryForm()">
               <v-text-field
                   v-model="name"

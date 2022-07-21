@@ -3,7 +3,7 @@
 
     <p class="text-h5 text-secondary mb-8 font-weight-bold">The power of technology in our hands</p>
 
-    <v-row align="center" justify="center" class="mb-10">
+    <v-row align="center" justify="center" class="mb-10" no-gutters>
       <v-col sm="6" cols="13" class="justify-center">
         <h1 class="text-h2 font-weight-bold text-primary">We build <br> digital products <br> for your success
         </h1>

@@ -1,7 +1,8 @@
 <template>
-  <v-footer class="text-white text-center footer-wrapper d-block py-10 bg-dark">
-    <v-row justify="center" class="h-100 py-15">
-      <v-col md="3" cols="12" class="text-center h-100">
+  <v-footer class="text-white text-center footer-wrapper d-block bg-dark"
+            :class="$vuetify.display.mobile?'py-0  ':'py-10'">
+    <v-row justify="center" class=" py-10" no-gutters>
+      <v-col md="3" cols="12" class="text-center py-5">
         <div class="px-5">
           <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/color-logo.svg')" alt="logo"
                class="app-logo">
@@ -13,47 +14,48 @@
           </div>
         </div>
       </v-col>
-      <v-col md="2" cols="12" class="text-left h-100">
+      <v-col md="3" cols="12" class="text-left py-5">
         <div class="px-3">
-          <p class="text-h6 text-secondary  mb-3"> Quick Links</p>
-          <ol class="link-style">
-            <li class="text-white pb-2">About</li>
-            <li class="text-white pb-2">Contact</li>
-            <li class="text-white pb-2">About</li>
-          </ol>
-        </div>
-      </v-col>
-      <v-col md="2" cols="12" class="text-left h-100">
-        <div class="px-3">
-          <p class="text-h6 text-secondary  mb-3">Our Services</p>
-          <ol class="link-style">
-            <li class="text-white pb-2">About</li>
-            <li class="text-white pb-2">Contact</li>
-            <li class="text-white pb-2">About</li>
-          </ol>
-        </div>
-      </v-col>
-      <v-col md="4" cols="12" class="text-left">
-        <div class="px-3">
-          <p class="text-h6 text-secondary  mb-3"> Quick Contact</p>
+          <p class="text-secondary  mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Quick
+            Contact</p>
           <div class="text-white d-flex align-center mb-3">
             <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/call.svg')" alt=""
                  class="d-inline-flex mr-3">+91 1234567890
           </div>
           <div class="text-white">
             <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/mail.svg')" alt=""
-                 class="d-inline-flex mr-3">+91 1234567890
+                 class="d-inline-flex mr-3">hello.spidertech@gmail.com
           </div>
         </div>
       </v-col>
+      <v-col md="2" cols="6" class="text-left py-5">
+        <div class="px-3">
+          <p class="text-secondary mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Quick Links</p>
+          <ol class="link-style">
+            <li class="text-white pb-2">About</li>
+            <li class="text-white pb-2">Contact</li>
+            <li class="text-white pb-2">About</li>
+          </ol>
+        </div>
+      </v-col>
+      <v-col md="2" cols="6" class="text-left py-5">
+        <div class="px-3">
+          <p class=" text-secondary  mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'">Our
+            Services</p>
+          <ol class="link-style">
+            <li class="text-white pb-2">About</li>
+            <li class="text-white pb-2">Contact</li>
+            <li class="text-white pb-2">About</li>
+          </ol>
+        </div>
+      </v-col>
+
     </v-row>
 
 
-    <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/rocket.svg')" alt=""
-         class="mr-3 rocket-illustration">
-    <div class="text-white mt-10">
-      {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-    </div>
+    <!--    <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/rocket.svg')" alt=""-->
+    <!--         class="mr-3 rocket-illustration">-->
+
   </v-footer>
 </template>
 <style lang="scss">
@@ -91,7 +93,7 @@
   .rocket-illustration {
     position: absolute;
     bottom: 0px;
-    right:-20px;
+    right: -20px;
     width: 450px;
 
   }

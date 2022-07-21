@@ -4,6 +4,15 @@
   font-family: 'Poppins', sans-serif !important;
 }
 
+body {
+  //overflow-x: hidden;
+}
+
+.mw-100 {
+  max-width: 100%;
+}
+
+
 // setting the default font
 
 $font-family: "Poppins";
@@ -25,4 +34,16 @@ $font-family: "Poppins";
   background-position: top;
   background-size: cover;
   margin-top: -1px;
+}
+
+.app-padding {
+  padding-left: 14%;
+  padding-right: 14%;
+}
+
+@media screen and (max-width: 1260px) {
+  .app-padding {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
 }

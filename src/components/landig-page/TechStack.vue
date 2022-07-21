@@ -1,9 +1,11 @@
 <template>
   <div :style="{ backgroundImage : 'url(' + background_image + ')' }" class="background-bottom-cover">
-    <div class="app-padding py-15 justify-center text-center h-100 align-center">
+    <div class="app-padding py-15 justify-center text-center align-center">
       <p class="text-h5 text-secondary mb-8 font-weight-bold">The power of technology in our hands</p>
-      <div v-for="(tech,i) in tech_stacks" :key="i" class="d-inline-flex my-8 tech-stack-card">
-        <div class="d-flex align-center justify-center px-3 py-1 mx-5 elevation-1">
+      <div v-for="(tech,i) in tech_stacks" :key="i" class="d-inline-flex tech-stack-card"
+           :class="$vuetify.display.mobile?'my-2':'my-8 '">
+        <div class="d-flex align-center justify-center elevation-1"
+             :class="$vuetify.display.mobile?' mx-2 px-3 ':' px-3 py-1 mx-4'">
           <img :src="tech.img" alt="" :width="tech.width||40" class="">
           <span class="text-h5 mx-2 font-weight-light">|</span>
           <span class="tech-title">{{ tech.title }}</span>
@@ -19,7 +21,7 @@
 
   div {
     border-radius: 5px;
-    width: 160px;
+    //width: 160px;
     background-color: white;
 
   }
@@ -76,6 +78,10 @@ export default {
           img: require("@/assets/tech-stack/javascript.svg")
         },
         {
+          title: "Git",
+          img: require("@/assets/tech-stack/git.svg")
+        },
+        {
           title: "Jquery",
           img: require("@/assets/tech-stack/jquery.svg")
         },
@@ -88,25 +94,21 @@ export default {
           img: require("@/assets/tech-stack/sass.svg")
         },
         {
-          title: "Git",
-          img: require("@/assets/tech-stack/git.svg")
+          title: "Mysql",
+          img: require("@/assets/tech-stack/mysql.svg")
         },
         {
           title: "Postgresql",
           img: require("@/assets/tech-stack/postgresql.svg")
         },
         {
-          title: "Mysql",
-          img: require("@/assets/tech-stack/mysql.svg")
-        },
-        {
           title: "AWS",
           img: require("@/assets/tech-stack/amazon-web-services.svg")
         },
-        // {
-        //   title: "Digital Ocean",
-        //   img: require("@/assets/tech-stack/digitalocean.svg")
-        // },
+        {
+          title: "Digital Ocean",
+          img: require("@/assets/tech-stack/digitalocean.svg")
+        },
       ]
     }
   },
