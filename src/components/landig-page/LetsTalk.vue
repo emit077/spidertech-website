@@ -14,7 +14,7 @@
         </p>
       </v-col>
       <v-col sm="6" cols="13" class="text-right">
-        <v-card class="mx-auto contact-card" max-width="400" elevation="10">
+        <div class="mx-auto contact-card" max-width="400">
           <v-card-text :class="$vuetify.display.mobile?'px-6 py-8':'px-10 py-8'">
             <v-form ref="contact_form" v-model="valid" lazy-validation @submit.prevent="submitQueryForm()">
               <v-text-field
@@ -53,7 +53,7 @@
               </center>
             </v-form>
           </v-card-text>
-        </v-card>
+        </div>
       </v-col>
     </v-row>
   </div>
@@ -65,8 +65,13 @@
 
 .contact-card {
   backdrop-filter: blur(10px);
-  backdrop-filter: saturate(180%) blur(10px);
-  opacity: 0.8;
+  backdrop-filter: saturate(200%) blur(10px);
+  background-color: rgb(var(--v-theme-surface), 0.1);
+  border-radius: 12px;
+  max-width: 400px;
+  -webkit-box-shadow: 0px 36px 58px 11px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 36px 58px 11px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 36px 58px 11px rgba(0, 0, 0, 0.25);
 }
 
 

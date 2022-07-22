@@ -1,5 +1,6 @@
 <template>
-  <div :style="{ backgroundImage : 'url(' + background_image + ')' }" class="background-bottom-cover">
+  <div :style="{ backgroundImage : 'url(' + background_image + ')' }"
+       class="background-bottom-cover">
     <div class="app-padding py-15 justify-center text-center align-center">
       <p class="text-h5 text-secondary mb-8 font-weight-bold">The power of technology in our hands</p>
       <div v-for="(tech,i) in tech_stacks" :key="i" class="d-inline-flex tech-stack-card"
@@ -15,15 +16,12 @@
   </div>
 </template>
 <style lang="scss" scoped>
-
 .tech-stack-card {
   font-weight: 450;
 
   div {
     border-radius: 5px;
-    //width: 160px;
     background-color: white;
-
   }
 
   img {
