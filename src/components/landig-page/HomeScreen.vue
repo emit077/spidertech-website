@@ -13,7 +13,8 @@
         </p>
       </v-col>
       <v-col sm="6" cols="12" class="text-right">
-        <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/home-iluustration.svg')" alt="img" class="w-100">
+        <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/home-iluustration.svg')" alt="img"
+             class="w-100">
       </v-col>
     </v-row>
   </div>
@@ -33,14 +34,13 @@ export default {
   data() {
     return {
       style: {
-        height: screen.height - 120 + "px",
-        // backgroundImage: 'url(' + require("@/assets/theme1/wave-1.svg") + ')'
+        height: screen.height - 130 + "px",
       }
     }
   },
   mounted() {
     this.style = {
-      height: screen.height - 120 + "px",
+      height: screen.height - 210 + "px",
       // backgroundImage: 'url(' + require("@/assets/" + this.$vuetify.theme.global.name + "/wave-1.svg") + ')'
     }
   },
