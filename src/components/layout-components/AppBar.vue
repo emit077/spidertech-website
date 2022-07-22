@@ -1,6 +1,8 @@
 <template>
   <div class="app-padding py-3 d-flex align-center text-center" id="app-bar">
-    <div class="d-inline-block w-25"><strong class="text-h4 font-weight-bold ">Spidertech</strong></div>
+    <div class="d-inline-block w-25"><strong class="font-weight-bold"
+                                             :class="$vuetify.display.mobile?'text-h6':'text-h4'">Spidertech</strong>
+    </div>
     <!--    <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/color-logo.svg')" alt="logo" class="app-logo"-->
     <!--    :width="$vuetify.display.mobile?80:''">-->
 
@@ -13,6 +15,19 @@
           </center>
         </div>
       </div>
+      <div v-else>
+        <v-menu v-model="menu" transition="slide-y-transition">
+          <template v-slot:activator="{ props }">
+            <v-btn v-if="menu" icon="mdi-close" text flat v-bind="props"></v-btn>
+            <v-btn v-else icon="mdi-menu" text flat v-bind="props"></v-btn>
+          </template>
+          <div class="text-center bg-surface" :style="menu_style">
+            <div v-for="(item,i) in link_list" :key="i" class="text-secondary pb-3">
+              <span class="un">  {{ item.title }}</span>
+            </div>
+          </div>
+        </v-menu>
+      </div>
     </div>
   </div>
 </template>
@@ -23,15 +38,16 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  height: 100px;
+  //height: 100px;
   vertical-align: middle;
   backdrop-filter: blur(10px);
   transition-duration: 500ms;
   transform-origin: bottom;
 
-  .un{
+  .un {
     font-weight: 450;
   }
+
   .un:after {
     content: '';
     width: 0px;
@@ -73,21 +89,30 @@ export default {
           title: "About Us",
           link: "#"
         }
-      ]
+      ],
+      menu_style: {},
+      menu: false,
     }
   },
   mounted() {
+    this.menu_style = {width: screen.width - 20 + "px !important"}
     const APP_BAR = document.getElementById("app-bar")
     document.addEventListener('scroll', function () {
-      console.log(document.scrollingElement.scrollTop)
       if (document.scrollingElement.scrollTop) {
-        APP_BAR.style.height = document.scrollingElement.scrollTop < 50 ? "100px" : "80px"
+        if (this.$vuetify.display.mobile)
+          APP_BAR.style.height = document.scrollingElement.scrollTop < 50 ? "60px" : "40px"
+        else
+          APP_BAR.style.height = document.scrollingElement.scrollTop < 50 ? "100px" : "80px"
         // APP_BAR.style.backgroundColor = document.scrollingElement.scrollTop < screen.height ? "transparent" : "rgb(var(--v-theme-primary), 0.1)"
         APP_BAR.style.backgroundColor = document.scrollingElement.scrollTop < screen.height ? "transparent" : "rgb(var(--v-theme-surface), 0.8)"
       }
 
-    });
+    }.bind(this));
   },
-  methods: {}
+  methods: {
+    onMenuUpdate() {
+      console.log("asd")
+    }
+  }
 };
 </script>
