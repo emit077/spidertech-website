@@ -5,7 +5,7 @@
     <what-we-do/>
     <tech-stack/>
     <lets-talk/>
-    <our-clients/>
+<!--    <our-clients/>-->
     <customer-testimonial/>
   </div>
 </template>
@@ -18,7 +18,7 @@ import OurDomain from "@/components/landig-page/OurDomain"
 import WhatWeDo from "@/components/landig-page/WhatWeDo"
 import LetsTalk from "@/components/landig-page/LetsTalk"
 import TechStack from "@/components/landig-page/TechStack"
-import OurClients from "@/components/landig-page/Ourclients"
+// import OurClients from "@/components/landig-page/Ourclients"
 import CustomerTestimonial from "@/components/landig-page/CustomerTestimonial"
 
 export default {
@@ -29,7 +29,7 @@ export default {
     WhatWeDo,
     LetsTalk,
     TechStack,
-    OurClients,
+    // OurClients,
     CustomerTestimonial
   },
   data() {

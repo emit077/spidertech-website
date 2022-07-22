@@ -32,17 +32,16 @@ export default {
   components: {},
   data() {
     return {
-      height: screen.height - 150,
       style: {
-        height: screen.height - 150 + "px",
-        backgroundImage: 'url(' + require("@/assets/theme1/wave-1.svg") + ')'
+        height: screen.height - 120 + "px",
+        // backgroundImage: 'url(' + require("@/assets/theme1/wave-1.svg") + ')'
       }
     }
   },
   mounted() {
     this.style = {
-      height: screen.height - 150 + "px",
-      backgroundImage: 'url(' + require("@/assets/" + this.$vuetify.theme.global.name + "/wave-1.svg") + ')'
+      height: screen.height - 120 + "px",
+      // backgroundImage: 'url(' + require("@/assets/" + this.$vuetify.theme.global.name + "/wave-1.svg") + ')'
     }
   },
   methods: {}

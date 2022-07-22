@@ -39,7 +39,7 @@
 
   img {
     transition-duration: 1s;
-    transform: scale(1.7);
+    transform: scale(1.3);
     transform-origin: right;
     filter: none;
   }

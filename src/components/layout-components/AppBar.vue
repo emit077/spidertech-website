@@ -1,7 +1,13 @@
 <template>
-  <v-app-bar color="#fff" flat class="app-bar app-padding pt-10" :absolute="true" :density="$vuetify.display.mobile?'dense':'prominent'" height="20">
+  <v-app-bar color="red" flat class=" app-padding"
+             elevate-on-scroll
+             shrink-on-scroll
+             height="100">
+    <!--                 :density="$vuetify.display.mobile?'dense':'prominent'"-->
+
     <v-app-bar-title>
-      <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/color-logo.svg')" alt="logo" class="app-logo">
+      <strong>SPIDERTECH</strong>
+      <!--      <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/color-logo.svg')" alt="logo" class="app-logo">-->
     </v-app-bar-title>
     <v-spacer></v-spacer>
     <div v-if="!$vuetify.display.mobile">
@@ -14,8 +20,7 @@
 </template>
 <!--  style  -->
 <style lang="scss">
-.app-logo {
-}
+
 </style>
 <!--   script   -->
 <script>
