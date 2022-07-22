@@ -1,5 +1,5 @@
 <template>
-  <div class="app-padding py-3 d-flex align-center text-center" id="app-bar">
+  <div class="app-padding py-3 d-flex align-center" id="app-bar">
     <div class="d-inline-block w-25"><strong class="font-weight-bold"
                                              :class="$vuetify.display.mobile?'text-h6':'text-h4'">Spidertech</strong>
     </div>
