@@ -13,11 +13,15 @@ body {
   position: relative;
   z-index: 100;
 }
-.router-link{
+
+.router-link {
   text-decoration: none;
   color: unset;
 }
 
+.fw-450 {
+  font-weight: 450 !important;
+}
 
 
 // setting the default font
@@ -30,11 +34,6 @@ $font-family: "Poppins";
   }
 
   font-family: $font-family, sans-serif !important;
-}
-
-.background-bottom-cover {
-  background-position: bottom;
-  background-size: cover;
 }
 
 .background-top-cover {

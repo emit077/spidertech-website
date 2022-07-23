@@ -1,6 +1,6 @@
 <template>
-  <div :style="{ backgroundImage : 'url(' + background_image + ')' }"
-       class="background-bottom-cover">
+  <!--  <div :style="{ backgroundImage : 'url('+ require('@/assets/'+this.$vuetify.theme.global.name+'/codeBG.png')+')' }" class="tech-stack-card-wrapper">-->
+  <div class="tech-stack-card-wrapper">
     <div class="app-padding py-15 justify-center text-center align-center">
       <p class="text-h5 text-secondary mb-8 font-weight-bold">The power of technology in our hands</p>
       <div v-for="(tech,i) in tech_stacks" :key="i" class="d-inline-flex tech-stack-card"
@@ -16,6 +16,12 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.tech-stack-card-wrapper {
+  background-color: #1F2020;
+  background-position: bottom;
+  background-size: cover;
+}
+
 .tech-stack-card {
   font-weight: 450;
 
@@ -52,7 +58,6 @@ export default {
   data() {
     return {
       isHovering: true,
-      background_image: require("@/assets/theme1/codeBG.png"),
       tech_stacks: [
         {
           title: "Python",

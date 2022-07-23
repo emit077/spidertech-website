@@ -30,7 +30,9 @@
           </template>
           <div class="text-center bg-surface" :style="menu_style">
             <div v-for="(item,i) in link_list" :key="i" class="text-secondary pb-3">
-              <span class="un">  {{ item.title }}</span>
+              <router-link class="router-link" :to="{ name: item.route_name}">
+                <span class="un">  {{ item.title }}</span>
+              </router-link>
             </div>
           </div>
         </v-menu>
