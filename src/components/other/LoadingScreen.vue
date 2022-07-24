@@ -155,6 +155,7 @@ $color: rgb(var(--v-theme-surface));
 <template>
   <div class="text-center">
     <v-overlay :model-value="this.$store.state.page_loading" :close-on-content-click="false"
+               transition="scroll-y-transition"
                class="d-flex align-center justify-center over-body">
 
       <div class="loader">

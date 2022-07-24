@@ -37,5 +37,14 @@ const router = createRouter({
   },
 })
 
+/* redirecting to home page if access token is not provided*/
+router.beforeEach((to, from, next) => {
+  next()
+  //setting the title
+  if (to && to.meta && to.meta.title)
+    window.document.title = "Spidertech | " + to.meta.title;
+
+});
+
 
 export default router

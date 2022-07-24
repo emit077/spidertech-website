@@ -1,41 +1,42 @@
 <template>
-  <div class="app-padding py-3 d-flex align-center" id="app-bar">
+  <div class="app-padding py-3" id="app-bar">
+    <div v-if="header" class="d-flex d-flex align-center">
+      <div class="d-inline-block w-25">
+        <router-link to="/" class="router-link">
+          <strong class="font-weight-bold" :class="$vuetify.display.mobile?'text-h6':'text-h4'">Spidertech</strong>
+        </router-link>
+      </div>
+      <!--    <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/color-logo.svg')" alt="logo" class="app-logo"-->
+      <!--    :width="$vuetify.display.mobile?80:''">-->
 
-    <div class="d-inline-block w-25">
-      <router-link to="/" class="router-link">
-        <strong class="font-weight-bold" :class="$vuetify.display.mobile?'text-h6':'text-h4'">Spidertech</strong>
-      </router-link>
-    </div>
-    <!--    <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/color-logo.svg')" alt="logo" class="app-logo"-->
-    <!--    :width="$vuetify.display.mobile?80:''">-->
-
-    <div class="d-inline-block text-right w-75">
-      <div v-if="!$vuetify.display.mobile">
-        <div v-for="(item,i) in link_list" :key="i"
-             class="d-inline-block ml-8 text-primary align-center">
-          <router-link class="router-link" :to="{ name: item.route_name}">
-            <center>
+      <div class="d-inline-block text-right w-75">
+        <div v-if="!$vuetify.display.mobile">
+          <div v-for="(item,i) in link_list" :key="i"
+               class="d-inline-block ml-8 text-primary align-center">
+            <router-link class="router-link" :to="{ name: item.route_name}">
+              <center>
               <span class="un"
                     :class="$route.name==item.route_name?'text-un':''"
               >  {{ item.title }}</span>
-            </center>
-          </router-link>
-        </div>
-      </div>
-      <div v-else>
-        <v-menu v-model="menu" transition="slide-y-transition">
-          <template v-slot:activator="{ props }">
-            <v-icon v-if="menu" size="x-large" v-bind="props">mdi-close</v-icon>
-            <v-icon v-else size="x-large" v-bind="props">mdi-menu</v-icon>
-          </template>
-          <div class="text-center py-4 mobile-navigation-menu" :style="menu_style">
-            <div v-for="(item,i) in link_list" :key="i" class="text-secondary pa-2">
-              <router-link class="router-link" :to="{ name: item.route_name}">
-                <span class="un">  {{ item.title }}</span>
-              </router-link>
-            </div>
+              </center>
+            </router-link>
           </div>
-        </v-menu>
+        </div>
+        <div v-else>
+          <v-menu v-model="menu" transition="slide-y-transition">
+            <template v-slot:activator="{ props }">
+              <v-icon v-if="menu" size="x-large" v-bind="props">mdi-close</v-icon>
+              <v-icon v-else size="x-large" v-bind="props">mdi-menu</v-icon>
+            </template>
+            <div class="text-center py-4 mobile-navigation-menu" :style="menu_style">
+              <div v-for="(item,i) in link_list" :key="i" class="text-secondary pa-2">
+                <router-link class="router-link" :to="{ name: item.route_name}">
+                  <span class="un">  {{ item.title }}</span>
+                </router-link>
+              </div>
+            </div>
+          </v-menu>
+        </div>
       </div>
     </div>
   </div>
@@ -94,6 +95,7 @@ export default {
   components: {},
   data() {
     return {
+      header: false,
       bar_height: 0,
       link_list: [
         {
@@ -131,6 +133,11 @@ export default {
       }
 
     }.bind(this));
+
+    setTimeout(() => {
+      console.log("as")
+      this.header = true
+    }, 500)
   },
   methods: {
     onMenuUpdate() {

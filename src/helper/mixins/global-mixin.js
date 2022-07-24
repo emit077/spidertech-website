@@ -4,7 +4,6 @@
 // let source = CancelToken.source();
 
 export default {
-
   methods: {
     // showSnakeBar(type = 'success', text) {
     //   this.$store.dispatch('snackbar/setSnackbar', {
@@ -17,7 +16,7 @@ export default {
       this.$store.state.page_loading = true
       setTimeout(() => {
         this.$store.state.page_loading = false
-      }, 1500)
+      }, 1000)
     },
     // errorHandler(response) {
     //   switch (response.status) {
