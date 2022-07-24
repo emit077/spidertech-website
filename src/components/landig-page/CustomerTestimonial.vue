@@ -1,58 +1,65 @@
 <template>
   <div class="app-padding testimonial-bg pb-10">
-    <v-carousel
-        hide-delimiters
-        show-arrows="hover"
-        color="transparent"
-        height="auto"
-        class="py-10"
-    >
-      <v-carousel-item
-          v-for="(item, i) in testimonial_list"
-          :key="i"
-          class="bg-transparent"
-      >
-        <v-row align="center" justify="center" class="testimonial-card-wrapper py-10"
-               :class="$vuetify.display.mobile?'px-1':'px-10'" no-gutters>
-          <v-col sm="3" cols="12" :class="$vuetify.display.mobile?'text-center ':'text-left'">
-            <img :src="item.img" aspect-ratio="1" class="img-circle" height="170" width="170">
-          </v-col>
-          <v-col sm="9" cols="12" class="text-left">
-            <v-icon size="100" class="mt-n15 mb-n7" color="rgb(var(--v-theme-primary), 0.1)"> mdi-format-quote-open
-            </v-icon>
-            <div class="text-subtitle-1">
-              {{ item.msg }}
-              <p class="text-primary text-subtitle-1 mt-3 mb-0 font-weight-bold text-right"> {{ item.name }}</p>
-              <p class="text-right mt-0 text-caption">{{ item.designation }}</p>
-            </div>
-          </v-col>
-        </v-row>
-      </v-carousel-item>
-      <v-carousel-item
-          v-for="(item, i) in testimonial_list"
-          :key="i"
-          class="bg-transparent"
-      >
-        <v-row align="center" justify="center" class="testimonial-card-wrapper py-10"
-               :class="$vuetify.display.mobile?'px-1':'px-10'" no-gutters>
-          <v-col sm="3" cols="12" :class="$vuetify.display.mobile?'text-center ':'text-left'">
-            <img :src="item.img" aspect-ratio="1" class="img-circle" height="170" width="170">
-          </v-col>
-          <v-col sm="9" cols="12" class="text-left">
-            <v-icon size="100" class="mt-n15 mb-n7" color="rgb(var(--v-theme-primary), 0.1)"> mdi-format-quote-open
-            </v-icon>
-            <div class="text-subtitle-1">
-              {{ item.msg }}
-              <p class="text-primary text-subtitle-1 mt-3 mb-0 font-weight-bold text-right"> {{ item.name }}</p>
-              <p class="text-right mt-0 text-caption">{{ item.designation }}</p>
-            </div>
-          </v-col>
-        </v-row>
-      </v-carousel-item>
-    </v-carousel>
+    <v-row align="center" justify="center" no-gutters>
+      <v-col sm="11" cols="12">
+        <v-carousel
+            hide-delimiters
+            v-model="carousel"
+            cycle
+            :show-arrows="false"
+            color="transparent"
+            class="py-10"
+            interval="3000"
+        >
+          <v-carousel-item
+              v-for="(item, i) in testimonial_list"
+              :key="i"
+              class="bg-transparent"
+          >
+            <v-row align="center" justify="center" class="testimonial-card-wrapper h-100"
+                   :class="$vuetify.display.mobile?'px-1':'px-10'" no-gutters>
+              <v-col sm="3" cols="12" :class="$vuetify.display.mobile?'text-center ':'text-left'">
+                <img :src="item.img" aspect-ratio="1"
+                     :class="$vuetify.display.mobile?'img-circle mb-n10':'img-circle'"
+                     :height="$vuetify.display.mobile?100:150"
+                     :width="$vuetify.display.mobile?100:150">
+              </v-col>
+              <v-col sm="9" cols="12" class="text-left" :class="$vuetify.display.mobile?'mt-n15':''">
+                <v-icon size="100"
+                        :class="$vuetify.display.mobile?'mt-n15 mb-n10':'mt-n15 mb-n7'"
+                        color="rgb(var(--v-theme-primary), 0.1)">
+                  mdi-format-quote-open
+                </v-icon>
+                <div class="text-subtitle-1">
+                  {{ item.msg }}
+                  <p class="text-primary text-subtitle-1 mt-3 mb-0 font-weight-bold text-right"> {{ item.name }}</p>
+                  <p class="text-right mt-0 text-caption">{{ item.designation }}</p>
+                </div>
+              </v-col>
+            </v-row>
+          </v-carousel-item>
+        </v-carousel>
+      </v-col>
+      <v-col sm="1" cols="12" :class="$vuetify.display.mobile?'text-center ':'text-right'">
+        <div>
+          <v-btn variant="outlined" color="secondary" class="control-btn ma-2" @click="changeSlide('previous')">
+            <v-icon size="x-large">mdi-chevron-left</v-icon>
+          </v-btn>
+          <v-btn variant="outlined" color="secondary" class="control-btn ma-2" @click="changeSlide('next')">
+            <v-icon size="x-large">mdi-chevron-right</v-icon>
+          </v-btn>
+        </div>
+      </v-col>
+    </v-row>
   </div>
 </template>
 <style lang="scss" scoped>
+.control-btn {
+  min-width: 40px;
+  width: 40px;
+}
+
+
 .testimonial-bg {
   background-color: rgb(var(--v-theme-secondary), 0.1)
 }
@@ -68,8 +75,19 @@
 export default {
   data() {
     return {
+      carousel: 0,
       testimonial_list: [
         {
+          img: "https://wp.xpeedstudio.com/sassico/wp-content/uploads/2019/10/Team-Image.jpg",
+          msg: "You can help customers in real-time across all of your channels from email, social, website, iOS, and Android apps.",
+          name: "Dr Om vijay Sahu",
+          designation: "Founder of Digital ayurveda",
+        }, {
+          img: "https://wp.xpeedstudio.com/sassico/wp-content/uploads/2019/10/Team-Image.jpg",
+          msg: "You can help customers in real-time across all of your channels from email, social, website, iOS, and Android apps.",
+          name: "Dr Om vijay Sahu",
+          designation: "Founder of Digital ayurveda",
+        }, {
           img: "https://wp.xpeedstudio.com/sassico/wp-content/uploads/2019/10/Team-Image.jpg",
           msg: "You can help customers in real-time across all of your channels from email, social, website, iOS, and Android apps.",
           name: "Dr Om vijay Sahu",
@@ -78,5 +96,16 @@ export default {
       ]
     }
   },
+  methods: {
+    changeSlide(action) {
+      console
+      if (action == 'next')
+        this.carousel = this.testimonial_list.length - 1 > this.carousel ? this.carousel + 1 : 0
+      else
+        this.carousel = this.carousel > 0 ? this.carousel - 1 : this.testimonial_list.length - 1
+
+
+    }
+  }
 }
 </script>

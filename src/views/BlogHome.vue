@@ -13,8 +13,8 @@ export default {
   components: {},
   data() {
     return {}
-  },
-  mounted() {
+  }, beforeMount() {
+    this.toggleLoading()
   },
   methods: {}
 };

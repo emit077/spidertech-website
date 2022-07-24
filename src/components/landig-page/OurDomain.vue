@@ -13,7 +13,7 @@
       </v-col>
     </v-row>
     <div class="text-center">
-      <div :class="this.$vuetify.mobile?'mx-3':'mx-10'" class="d-inline-block pa-5 " v-for="(item, i) in domain_list"
+      <div :class="this.$vuetify.display.mobile?'mx-3':'mx-10'" class="d-inline-block pa-5 " v-for="(item, i) in domain_list"
            :key="i">
         <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/'+item.img_name)" alt="img" width="70"
              height="70">

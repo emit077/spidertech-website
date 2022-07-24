@@ -1,11 +1,16 @@
 <template>
-  <v-footer class="text-white text-center footer-wrapper d-block bg-dark"
+  <v-footer app absolute class="text-white text-center footer-wrapper d-block bg-dark"
+            v-if="footer"
             :class="$vuetify.display.mobile?'py-0  ':'py-10'">
     <v-row justify="center" class=" py-10" no-gutters>
       <v-col md="3" cols="12" class="text-center py-5">
         <div class="px-5">
-          <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/color-logo.svg')" alt="logo"
-               class="app-logo">
+          <router-link to="/" class="router-link">
+            <strong class="font-weight-bold text-white"
+                    :class="$vuetify.display.mobile?'text-h4':'text-h4'">Spidertech</strong>
+          </router-link>
+          <!--          <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/color-logo.svg')" alt="logo"-->
+          <!--               class="app-logo">-->
           <v-divider class="my-4" color="rgb(var(--v-theme-secondary2), 0.3)"></v-divider>
           <div class="d-inline-flex mx-2" v-for="(item,i) in contact_list" :key="i">
             <a :href="item.link" target="_blank" class="">
@@ -104,6 +109,7 @@
 export default {
   name: "AppFooter",
   data: () => ({
+    footer: false,
     contact_list: [
       {
         icon: "mdi-github",
@@ -122,22 +128,11 @@ export default {
         link: "https://www.instagram.com/emit077/",
       },
     ],
-    items: [
-      {
-        title: 'Item #1',
-        value: 1,
-      },
-      {
-        title: 'Item #2',
-        value: 2,
-      },
-      {
-        title: 'Item #3',
-        value: 3,
-      },
-    ],
   }),
-  created() {
+  mounted() {
+    setTimeout(() => {
+      this.footer = true
+    }, 500)
   },
   methods: {},
 };

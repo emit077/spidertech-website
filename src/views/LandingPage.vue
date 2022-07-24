@@ -5,7 +5,7 @@
     <what-we-do/>
     <tech-stack/>
     <lets-talk/>
-<!--    <our-clients/>-->
+    <!--    <our-clients/>-->
     <customer-testimonial/>
   </div>
 </template>
@@ -35,7 +35,11 @@ export default {
   data() {
     return {}
   },
+  beforeMount() {
+    this.toggleLoading()
+  },
   mounted() {
+
   },
   methods: {}
 };

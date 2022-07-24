@@ -7,7 +7,7 @@
           <h1 class="font-weight-bold text-primary" :class="$vuetify.display.mobile?'text-h4 ':'text-h2'">
             We build digital products for your success
           </h1>
-          <p class="mt-6 text-secondary" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'">
+          <p class="text-secondary" :class="$vuetify.display.mobile?'text-subtitle-1 mb-5 mt-4':'text-h6 mt-6'">
             Scale your business with <br> our great products
           </p>
         </div>

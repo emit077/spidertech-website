@@ -7,11 +7,13 @@ import {loadFonts} from './plugins/webfontloader'
 
 import rules from "@/helper/rules";
 import urls from "@/helper/urls";
+import globalMixin from "@/helper/mixins/global-mixin";
 
 loadFonts()
 
 
 const app = createApp(App)
+app.mixin(globalMixin)
 app.config.globalProperties.$rules = rules
 app.config.globalProperties.$urls = urls
 

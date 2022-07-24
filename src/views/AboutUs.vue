@@ -14,6 +14,9 @@ export default {
   data() {
     return {}
   },
+   beforeMount() {
+    this.toggleLoading()
+  },
   mounted() {
   },
   methods: {}

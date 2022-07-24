@@ -28,8 +28,8 @@
             <v-icon v-if="menu" size="x-large" v-bind="props">mdi-close</v-icon>
             <v-icon v-else size="x-large" v-bind="props">mdi-menu</v-icon>
           </template>
-          <div class="text-center bg-surface" :style="menu_style">
-            <div v-for="(item,i) in link_list" :key="i" class="text-secondary pb-3">
+          <div class="text-center py-4 mobile-navigation-menu" :style="menu_style">
+            <div v-for="(item,i) in link_list" :key="i" class="text-secondary pa-2">
               <router-link class="router-link" :to="{ name: item.route_name}">
                 <span class="un">  {{ item.title }}</span>
               </router-link>
@@ -82,6 +82,10 @@
   }
 }
 
+.mobile-navigation-menu {
+  background-color: rgb(var(--v-theme-surface), 0.8);
+  backdrop-filter: blur(10px);
+}
 </style>
 <!--   script   -->
 <script>

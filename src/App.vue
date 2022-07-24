@@ -5,6 +5,7 @@
       <router-view/>
     </v-main>
     <app-footer/>
+    <loading-screen/>
   </v-app>
 </template>
 <style lang="scss">
@@ -12,18 +13,19 @@
 @import "assets/css/animation.scss";
 
 
-
 </style>
 
 <script>
 import AppBar from "@/components/layout-components/AppBar"
 import AppFooter from "@/components/layout-components/AppFooter"
+import LoadingScreen from "@/components/other/LoadingScreen"
 
 export default {
   name: 'App',
   components: {
     AppBar,
-    AppFooter
+    AppFooter,
+    LoadingScreen
   },
   data: () => ({
     //

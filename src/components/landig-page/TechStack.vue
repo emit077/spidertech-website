@@ -4,7 +4,7 @@
     <div class="app-padding py-15 justify-center text-center align-center">
       <p class="text-h5 text-secondary mb-8 font-weight-bold">The power of technology in our hands</p>
       <div v-for="(tech,i) in tech_stacks" :key="i" class="d-inline-flex tech-stack-card"
-           :class="$vuetify.display.mobile?'my-2':'my-8 '">
+           :class="$vuetify.display.mobile?'my-5':'my-8 '">
         <div class="d-flex align-center justify-center elevation-1"
              :class="$vuetify.display.mobile?' mx-2 px-3 ':' px-3 py-1 mx-4'">
           <img :src="tech.img" alt="" :width="tech.width||40" class="">
