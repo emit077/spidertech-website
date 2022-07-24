@@ -25,6 +25,12 @@ const routes = [
     meta: {title: "Blogs"},
     component: () => import(/* webpackChunkName: "about" */ '../views/BlogHome')
   },
+  {
+    path: '/blogs/post/:id',
+    name: 'blog_feed',
+    meta: {title: "Post"},
+    component: () => import(/* webpackChunkName: "about" */ '../views/BlogFeed')
+  },
 
 ]
 
