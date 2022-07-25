@@ -8,24 +8,31 @@
     <!--    <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/color-logo.svg')" alt="logo" class="app-logo"-->
     <!--    :width="$vuetify.display.mobile?80:''">-->
 
+    <!--  desktop  -->
     <div class="d-inline-block text-right w-75" v-if="header">
       <div v-if="!$vuetify.display.mobile">
-        <div v-for="(item,i) in nav_link_list" :key="i"
-             class="d-inline-block ml-8 text-primary align-center">
-          <router-link class="router-link" :to="{ name: item.route_name}" v-if="item.route_name">
-            <center>
-              <span class="un"
-                    :class="$route.name==item.route_name?'text-un':''"
-              >  {{ item.title }}</span>
-            </center>
-          </router-link>
-          <a href="#" v-else-if="item.link" @click.prevent="onLinkClick(item.link)" class="text-center router-link">
-            <center>
-              <span class="un">  {{ item.title }}</span>
-            </center>
-          </a>
+
+        <div v-for="(item,i) in nav_link_list" :key="i" class="d-inline-block align-center">
+          <span class="ml-8 d-inline-block" v-if="item.link && $route.name==item.link_page">
+            <a href="#" @click.prevent="onLinkClick(item.link)" class="text-center router-link">
+              <center>
+                <span class="un"> {{ item.title }}</span>
+              </center>
+            </a>
+          </span>
+          <span class="ml-8 d-inline-block" v-else-if="item.route_name">
+            <router-link class="router-link " :to="{ name: item.route_name}">
+              <center>
+                <span class="un"
+                      :class="$route.name==item.route_name?'text-un':''"
+                >  {{ item.title }}</span>
+              </center>
+            </router-link>
+          </span>
         </div>
+
       </div>
+      <!-- mobile -->
       <div v-else>
         <v-menu v-model="menu" transition="slide-y-transition">
           <template v-slot:activator="{ props }">
@@ -33,13 +40,23 @@
             <v-icon v-else size="x-large" v-bind="props">mdi-menu</v-icon>
           </template>
           <div class="text-center py-4 mobile-navigation-menu" :style="menu_style">
-            <div v-for="(item,i) in nav_link_list" :key="i" class="text-secondary pa-2">
-              <router-link class="router-link" :to="{ name: item.route_name}" v-if="item.route_name">
-                <span class="un">  {{ item.title }}</span>
-              </router-link>
-              <a href="#" v-else-if="item.link" @click.prevent="onLinkClick(item.link)" class="text-center router-link">
-                <span class="un">  {{ item.title }}</span>
+          <div v-for="(item,i) in nav_link_list" :key="i" class="align-center text-secondary">
+            <span class="my-2 d-inline-block" v-if="item.link && $route.name==item.link_page">
+              <a href="#" @click.prevent="onLinkClick(item.link)" class="text-center router-link">
+                <center>
+                  <span class="un"> {{ item.title }}</span>
+                </center>
               </a>
+            </span>
+              <span class="my-2 d-inline-block" v-else-if="item.route_name">
+            <router-link class="router-link " :to="{ name: item.route_name}">
+              <center>
+                <span class="un"
+                      :class="$route.name==item.route_name?'text-un':''"
+                >  {{ item.title }}</span>
+              </center>
+            </router-link>
+          </span>
             </div>
           </div>
         </v-menu>
@@ -120,9 +137,7 @@ export default {
         // APP_BAR.style.backgroundColor = document.scrollingElement.scrollTop < screen.height ? "transparent" : "rgb(var(--v-theme-primary), 0.1)"
         APP_BAR.style.backgroundColor = document.scrollingElement.scrollTop < screen.height ? "transparent" : "rgb(var(--v-theme-surface), 0.8)"
       }
-
     }.bind(this));
-
     setTimeout(() => {
       this.header = true
     }, 500)

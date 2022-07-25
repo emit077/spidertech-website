@@ -3,7 +3,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'landingPage',
+    name: 'home',
     meta: {title: "Home"},
     component: () => import(/* webpackChunkName: "about" */ '../views/LandingPage')
   },

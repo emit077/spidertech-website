@@ -8,12 +8,22 @@ export default {
     return {
       nav_link_list: [
         {
+          title: "Home",
+          link: "landing-screen",
+          link_page: "home",
+          route_name: 'home',
+        },
+        {
           title: "What we do?",
-          link: "what-we-do"
+          link: "what-we-do",
+          link_page: "home",
+          // route_name: 'home',
         },
         {
           title: "Contact Us",
-          link: "lets-talk"
+          link: "lets-talk",
+          link_page: "home",
+          // route_name: 'home',
         },
         {
           title: "Blogs",

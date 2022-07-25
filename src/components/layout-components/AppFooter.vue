@@ -35,14 +35,26 @@
           <p class=" text-secondary  mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Quick
             Links</p>
           <ol class="link-style">
-            <li class="text-white pb-2" v-for="(item,i) in nav_link_list" :key="i">
-              <router-link class="router-link" :to="{ name: item.route_name}" v-if="item.route_name">
-                <span>  {{ item.title }}</span>
-              </router-link>
-              <a href="#" v-else-if="item.link" @click.prevent="onLinkClick(item.link)" class="text-center router-link">
-                <span class="text-white">  {{ item.title }}</span>
-              </a>
+            <!--            <li class="text-white pb-2" v-for="(item,i) in nav_link_list" :key="i">-->
+            <li v-for="(item,i) in nav_link_list" :key="i" class="text-white">
+          <span class="d-inline-block pb-2" v-if="item.link && $route.name==item.link_page">
+            <a href="#" @click.prevent="onLinkClick(item.link)" class="router-link">
+              <center>
+                <span class="un"> {{ item.title }}</span>
+              </center>
+            </a>
+          </span>
+              <span class="d-inline-block pb-2" v-else-if="item.route_name">
+            <router-link class="router-link " :to="{ name: item.route_name}">
+              <center>
+                <span class="un text-white"
+                      :class="$route.name==item.route_name?'text-un':''"
+                >  {{ item.title }}</span>
+              </center>
+            </router-link>
+          </span>
             </li>
+            <!--            </li>-->
           </ol>
         </div>
       </v-col>
