@@ -94,11 +94,22 @@ export default {
       suggestions: [],
     }
   },
+  watch: {
+    $route(to, from) {
+      if (to !== from) {
+        location.reload();
+      }
+    }
+  },
+  beforeMount() {
+    this.toggleLoading()
+  },
   mounted() {
     this.blog_data = Data.blog_list[this.$route.params.id || 0];
     this.suggestions = Data.blog_list.slice(0, 3)
     console.log(this.suggestions)
-  },
+  }
+  ,
   methods: {}
 };
 </script>

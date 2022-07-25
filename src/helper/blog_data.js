@@ -6,14 +6,14 @@ export default {
       "read_time": "5 Min Read",
       "author_name": "Rima Banchhor",
       "author_img": require('@/assets/blog/authors/rima.jpeg'),
-      "date": "25/07/2022",
+      "date": "25 July 2022",
       "title": "How SEO Service In India Can Help Your Business?",
-      "img_url": "https://img.freepik.com/free-photo/hand-arrange-white-letters-as-seo_1384-119.jpg?t=st=1658700610~exp=1658701210~hmac=4d7125026b3ded9933b31dfb901f8df22905b4a4d2eb910e7b07cb7803944f27&w=2000",
+      "img_url": "https://cdn.pixabay.com/photo/2017/10/15/22/18/seo-2855554_1280.jpg",
       "items": [
         {
           "type": "img",
-          "url": "https://img.freepik.com/free-photo/hand-arrange-white-letters-as-seo_1384-119.jpg?t=st=1658700610~exp=1658701210~hmac=4d7125026b3ded9933b31dfb901f8df22905b4a4d2eb910e7b07cb7803944f27&w=2000",
-          "caption": "Photo by <a href='https://www.freepik.com/photos/customer-management' target='_blank'>zaozaa09</a> on  <a href='https://www.freepik.com/'  target='_blank'>freepik</a>",
+          "url": "https://cdn.pixabay.com/photo/2017/10/15/22/18/seo-2855554_1280.jpg",
+          "caption": "Photo by <a href='https://pixabay.com/users/xtendo-1194315/' target='_blank'>Xtendo</a> on  <a href='https://pixabay.com/photos/seo-beach-sand-2855554/'  target='_blank'>Pixabay</a>",
           "class_name": "text-right",
           "m_class_name": "text-right"
         },
@@ -45,14 +45,14 @@ export default {
       "read_time": "5 Min Read",
       "author_name": "Rima Banchhor",
       "author_img": require('@/assets/blog/authors/rima.jpeg'),
-      "date": "25/07/2022",
+      "date": "25 July 2022",
       "title": "5 Keys to Expert Web Design",
       "img_url": "https://cdn.pixabay.com/photo/2016/07/10/19/19/interior-design-1508276_1280.jpg",
       "items": [
         {
           "type": "img",
           "url": "https://cdn.pixabay.com/photo/2016/07/10/19/19/interior-design-1508276_1280.jpg",
-          "caption": "Photo by <a href='https://pixabay.com/users/martynaszulist-1055898/?tab=most-relevant'  target='_blank'>martynaszulist</a> on  <a href='https://pixabay.com/photos/cobweb-web-spider-insect-branches-4439844/'  target='_blank'>pixabay</a>",
+          "caption": "Photo by <a href='https://pixabay.com/users/martynaszulist-1055898/?tab=most-relevant'  target='_blank'>martynaszulist</a> on  <a href='https://pixabay.com/'  target='_blank'>pixabay</a>",
           "class_name": "text-right",
           "m_class_name": "text-right"
         },

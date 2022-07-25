@@ -69,8 +69,6 @@ export default {
   components: {},
   data() {
     return {}
-  }, beforeMount() {
-    this.toggleLoading()
   },
   mounted() {
   },
