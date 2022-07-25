@@ -13,9 +13,11 @@
       </v-col>
     </v-row>
     <div class="text-center">
-      <div :class="this.$vuetify.display.mobile?'mx-3':'mx-10'" class="d-inline-block pa-5 " v-for="(item, i) in domain_list"
+      <div :class="this.$vuetify.display.mobile?'mx-3':'mx-10'" class="d-inline-block pa-5 "
+           v-for="(item, i) in domain_list"
            :key="i">
-        <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/'+item.img_name)" alt="img" width="70"
+        <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/'+item.img_name)" alt="img"
+             width="70"
              height="70">
         <p class="text-secondary2 text-subtitle-1 fw-450 mt-2">{{ item.name }}</p>
       </div>
@@ -37,7 +39,7 @@ export default {
       domain_list: [
         {
           img_name: "account.svg",
-          name: "Account"
+          name: "Account",
         },
         {
           img_name: "Education.svg",

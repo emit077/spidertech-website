@@ -1,7 +1,7 @@
 <template>
   <v-footer app absolute class="text-white text-center footer-wrapper d-block bg-dark"
             v-if="footer"
-            :class="$vuetify.display.mobile?'py-0  ':'py-10'">
+            :class="$vuetify.display.mobile?'py-0  ':'pt-10 pb-4'">
     <v-row justify="center" class=" py-10" no-gutters>
       <v-col md="3" cols="12" class="text-center py-5">
         <div class="px-5">
@@ -73,6 +73,16 @@
         </div>
       </v-col>
     </v-row>
+
+    <v-divider color="rgb(var(--v-theme-surface),0.1)"></v-divider>
+    <p class="text-caption text-center mt-4" style="color: rgb(var(--v-theme-surface),0.5)">
+      ©Spidertech-2022
+    </p>
+    <p class="text-caption text-center mt-1" style="color: rgb(var(--v-theme-surface),0.5)">
+      Designed and developed with ❤️ by
+      Spidertech</p>
+
+
   </v-footer>
 </template>
 <style lang="scss">
