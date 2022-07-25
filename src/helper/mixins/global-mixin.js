@@ -4,6 +4,27 @@
 // let source = CancelToken.source();
 
 export default {
+  data() {
+    return {
+      nav_link_list: [
+        {
+          title: "What we do?",
+          link: "what-we-do"
+        },
+        {
+          title: "Contact Us",
+          link: "lets-talk"
+        },
+        {
+          title: "Blogs",
+          route_name: 'blogs',
+          link: "#"
+        }
+      ],
+      menu_style: {},
+      menu: false,
+    }
+  },
   methods: {
     // showSnakeBar(type = 'success', text) {
     //   this.$store.dispatch('snackbar/setSnackbar', {
@@ -12,6 +33,10 @@ export default {
     //     color: type
     //   })
     // },
+    onLinkClick(id) {
+      const SCROlL_ELM = document.getElementById(id)
+      SCROlL_ELM.scrollIntoView({behavior: "smooth"});
+    },
     toggleLoading() {
       this.$store.state.page_loading = true
       setTimeout(() => {

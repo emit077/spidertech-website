@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="" id="what-we-do">
     <div v-for="(service,i) in service_list" :key="i"
          class="app-padding"
          :class="$vuetify.display.mobile?'no-bg':service.class"

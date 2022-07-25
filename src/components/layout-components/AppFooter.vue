@@ -19,6 +19,33 @@
           </div>
         </div>
       </v-col>
+      <v-col md="2" cols="6" class="text-left py-5">
+        <div class="px-3">
+          <p class="text-secondary mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Our Services</p>
+          <ol class="link-style">
+            <li class="text-white pb-2">Web development</li>
+            <li class="text-white pb-2">UI/UX designing</li>
+            <li class="text-white pb-2">Graphics designing</li>
+            <li class="text-white pb-2">Website designing</li>
+          </ol>
+        </div>
+      </v-col>
+      <v-col md="2" cols="6" class="text-left py-5">
+        <div class="px-3">
+          <p class=" text-secondary  mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Quick
+            Links</p>
+          <ol class="link-style">
+            <li class="text-white pb-2" v-for="(item,i) in nav_link_list" :key="i">
+              <router-link class="router-link" :to="{ name: item.route_name}" v-if="item.route_name">
+                <span>  {{ item.title }}</span>
+              </router-link>
+              <a href="#" v-else-if="item.link" @click.prevent="onLinkClick(item.link)" class="text-center router-link">
+                <span class="text-white">  {{ item.title }}</span>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </v-col>
       <v-col md="3" cols="12" class="text-left py-5">
         <div class="px-3">
           <p class="text-secondary  mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Quick
@@ -33,34 +60,7 @@
           </div>
         </div>
       </v-col>
-      <v-col md="2" cols="6" class="text-left py-5">
-        <div class="px-3">
-          <p class="text-secondary mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Quick Links</p>
-          <ol class="link-style">
-            <li class="text-white pb-2">About</li>
-            <li class="text-white pb-2">Contact</li>
-            <li class="text-white pb-2">About</li>
-          </ol>
-        </div>
-      </v-col>
-      <v-col md="2" cols="6" class="text-left py-5">
-        <div class="px-3">
-          <p class=" text-secondary  mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'">Our
-            Services</p>
-          <ol class="link-style">
-            <li class="text-white pb-2">About</li>
-            <li class="text-white pb-2">Contact</li>
-            <li class="text-white pb-2">About</li>
-          </ol>
-        </div>
-      </v-col>
-
     </v-row>
-
-
-    <!--    <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/rocket.svg')" alt=""-->
-    <!--         class="mr-3 rocket-illustration">-->
-
   </v-footer>
 </template>
 <style lang="scss">
@@ -112,8 +112,8 @@ export default {
     footer: false,
     contact_list: [
       {
-        icon: "mdi-github",
-        link: "https://github.com/emit077",
+        icon: "mdi-facebook",
+        link: "https://www.facebook.com/Spidertechin-109532415172906",
       },
       {
         icon: "mdi-linkedin",

@@ -61,9 +61,17 @@
     </div>
 
     <div class="text-right my-5">
-      <v-btn color="secondary" variant="outlined" rounded> Read More</v-btn>
+      <router-link class="router-link" :to="{ name:'blogs'}">
+        <v-btn color="secondary" variant="outlined" rounded> Read More</v-btn>
+      </router-link>
     </div>
+    <!-- suggestions -->
     <v-divider></v-divider>
+    <v-row align="center" justify="center" class="my-6">
+      <v-col sm="4" cols="12" class="text-right" v-for="(blog,i) in suggestions" :key="i">
+        <blog-card-template :blog="blog"/>
+      </v-col>
+    </v-row>
   </div>
 </template>
 <!--  -->
@@ -75,17 +83,21 @@
 <!--   -->
 <script>
 import Data from "@/helper/blog_data"
+import BlogCardTemplate from "@/components/other/BlogCardTemplate";
 
 export default {
   name: 'BlogFeed',
-  components: {},
+  components: {BlogCardTemplate},
   data() {
     return {
       blog_data: [],
+      suggestions: [],
     }
   },
   mounted() {
-    this.blog_data = Data.blog_list[this.$route.params.id || 0]
+    this.blog_data = Data.blog_list[this.$route.params.id || 0];
+    this.suggestions = Data.blog_list.slice(0, 3)
+    console.log(this.suggestions)
   },
   methods: {}
 };

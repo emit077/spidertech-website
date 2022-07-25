@@ -1,5 +1,5 @@
 <template>
-  <div class="py-15 app-padding contact-section" :style="{ backgroundImage : 'url(' + background_image + ')' }">
+  <div id="lets-talk" class="py-15 app-padding contact-section" :style="{ backgroundImage : 'url(' + background_image + ')' }">
     <v-row align="center" justify="center" class="my-10" no-gutters>
       <v-col sm="6" cols="13" :class="$vuetify.display.mobile?'text-center':'text-right'">
         <p class="text-secondary2 font-weight-bold mb-5" :class="$vuetify.display.mobile?'text-subtitle-1':'text-h6'">

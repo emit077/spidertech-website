@@ -10,15 +10,20 @@
 
     <div class="d-inline-block text-right w-75" v-if="header">
       <div v-if="!$vuetify.display.mobile">
-        <div v-for="(item,i) in link_list" :key="i"
+        <div v-for="(item,i) in nav_link_list" :key="i"
              class="d-inline-block ml-8 text-primary align-center">
-          <router-link class="router-link" :to="{ name: item.route_name}">
+          <router-link class="router-link" :to="{ name: item.route_name}" v-if="item.route_name">
             <center>
               <span class="un"
                     :class="$route.name==item.route_name?'text-un':''"
               >  {{ item.title }}</span>
             </center>
           </router-link>
+          <a href="#" v-else-if="item.link" @click.prevent="onLinkClick(item.link)" class="text-center router-link">
+            <center>
+              <span class="un">  {{ item.title }}</span>
+            </center>
+          </a>
         </div>
       </div>
       <div v-else>
@@ -28,10 +33,13 @@
             <v-icon v-else size="x-large" v-bind="props">mdi-menu</v-icon>
           </template>
           <div class="text-center py-4 mobile-navigation-menu" :style="menu_style">
-            <div v-for="(item,i) in link_list" :key="i" class="text-secondary pa-2">
-              <router-link class="router-link" :to="{ name: item.route_name}">
+            <div v-for="(item,i) in nav_link_list" :key="i" class="text-secondary pa-2">
+              <router-link class="router-link" :to="{ name: item.route_name}" v-if="item.route_name">
                 <span class="un">  {{ item.title }}</span>
               </router-link>
+              <a href="#" v-else-if="item.link" @click.prevent="onLinkClick(item.link)" class="text-center router-link">
+                <span class="un">  {{ item.title }}</span>
+              </a>
             </div>
           </div>
         </v-menu>
@@ -95,23 +103,6 @@ export default {
     return {
       header: false,
       bar_height: 0,
-      link_list: [
-        {
-          title: "About Us",
-          route_name: 'about_us',
-          link: "#"
-        },
-        {
-          title: "Contact Us",
-          route_name: 'contact_us',
-          link: "#"
-        },
-        {
-          title: "Blog",
-          route_name: 'blogs',
-          link: "#"
-        }
-      ],
       menu_style: {},
       menu: false,
     }
@@ -121,7 +112,6 @@ export default {
     const APP_BAR = document.getElementById("app-bar")
     APP_BAR.style.height = this.$vuetify.display.mobile ? '60px' : '100px'
     document.addEventListener('scroll', function () {
-      console.log("scoll")
       if (document.scrollingElement.scrollTop) {
         if (this.$vuetify.display.mobile)
           APP_BAR.style.height = document.scrollingElement.scrollTop < 50 ? "60px" : "50px"
@@ -137,10 +127,6 @@ export default {
       this.header = true
     }, 500)
   },
-  methods: {
-    onMenuUpdate() {
-      console.log("asd")
-    }
-  }
+  methods: {}
 };
 </script>
