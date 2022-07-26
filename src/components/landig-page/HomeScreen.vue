@@ -34,13 +34,13 @@ export default {
   data() {
     return {
       style: {
-        height: screen.height - 170 + "px",
+        height: screen.height - 150 + "px",
       }
     }
   },
   mounted() {
     this.style = {
-      height: screen.height - 170 + "px",
+      height: screen.height - 150 + "px",
       // backgroundImage: 'url(' + require("@/assets/" + this.$vuetify.theme.global.name + "/wave-1.svg") + ')'
     }
   },
