@@ -27,7 +27,7 @@
               <v-col sm="9" cols="12" class="text-left" :class="$vuetify.display.mobile?'mt-n15':''">
                 <v-icon size="100"
                         :class="$vuetify.display.mobile?'mt-n15 mb-n10':'mt-n15 mb-n7'"
-                        color="rgb(var(--v-theme-primary), 0.1)">
+                        color="rgb(var(--v-theme-theme-stroke-2), 0.3)">
                   mdi-format-quote-open
                 </v-icon>
                 <div class="text-theme-stroke-1 opacity-8 fs-20">

@@ -36,8 +36,8 @@
       <div v-else>
         <v-menu v-model="menu" transition="slide-y-transition">
           <template v-slot:activator="{ props }">
-            <v-icon v-if="menu" size="x-large" v-bind="props">mdi-close</v-icon>
-            <v-icon v-else size="x-large" v-bind="props">mdi-menu</v-icon>
+            <v-icon color="theme-stroke-1" v-if="menu" size="x-large" v-bind="props">mdi-close</v-icon>
+            <v-icon color="theme-stroke-1" v-else size="x-large" v-bind="props">mdi-menu</v-icon>
           </template>
           <div class="text-center py-4 mobile-navigation-menu" :style="menu_style">
             <div v-for="(item,i) in nav_link_list" :key="i" class="align-center text-theme-stroke-2">
@@ -117,7 +117,8 @@
 }
 
 .mobile-navigation-menu {
-  background-color: rgb(var(--v-theme-surface), 0.8);
+  margin-top: 12px;
+  background-color: rgb(var(--v-theme-theme-fill-1), 0.8);
   backdrop-filter: blur(10px);
 }
 </style>
