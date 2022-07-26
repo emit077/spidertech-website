@@ -1,5 +1,5 @@
 <template>
-  <div class="app-padding testimonial-bg pb-10">
+  <div class="app-padding pb-10" :class="'testimonial-bg-'+$vuetify.theme.global.name">
     <v-row align="center" justify="center" no-gutters>
       <v-col sm="11" cols="12">
         <v-carousel
@@ -30,10 +30,12 @@
                         color="rgb(var(--v-theme-primary), 0.1)">
                   mdi-format-quote-open
                 </v-icon>
-                <div class="text-subtitle-1">
+                <div class="text-theme-stroke-1 opacity-8 fs-20">
                   {{ item.msg }}
-                  <p class="text-primary text-subtitle-1 mt-3 mb-0 font-weight-bold text-right"> {{ item.name }}</p>
-                  <p class="text-right mt-0 text-caption">{{ item.designation }}</p>
+                  <p class="text-theme-stroke-2 text-subtitle-1 mt-3 mb-0 font-weight-bold text-right"> {{
+                      item.name
+                    }}</p>
+                  <p class="text-right mt-0 text-caption text-theme-stroke-1 opacity-8">{{ item.designation }}</p>
                 </div>
               </v-col>
             </v-row>
@@ -42,10 +44,10 @@
       </v-col>
       <v-col sm="1" cols="12" :class="$vuetify.display.mobile?'text-center ':'text-right'">
         <div>
-          <v-btn variant="outlined" color="secondary" class="control-btn ma-2" @click="changeSlide('previous')">
+          <v-btn variant="outlined" color="theme-stroke-2" class="control-btn ma-2" @click="changeSlide('previous')">
             <v-icon size="x-large">mdi-chevron-left</v-icon>
           </v-btn>
-          <v-btn variant="outlined" color="secondary" class="control-btn ma-2" @click="changeSlide('next')">
+          <v-btn variant="outlined" color="theme-stroke-2" class="control-btn ma-2" @click="changeSlide('next')">
             <v-icon size="x-large">mdi-chevron-right</v-icon>
           </v-btn>
         </div>
@@ -60,8 +62,12 @@
 }
 
 
-.testimonial-bg {
-  background-color: rgb(var(--v-theme-secondary), 0.1)
+.testimonial-bg-theme1 {
+  background-color: rgb(var(--v-theme-theme-fill-3), 0.1)
+}
+
+.testimonial-bg-theme2 {
+  background-color: rgb(var(--v-theme-theme-fill-3), 1)
 }
 
 .testimonial-card-wrapper {

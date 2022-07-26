@@ -2,11 +2,11 @@
   <div id="lets-talk" class="py-15 app-padding contact-section" :style="{ backgroundImage : 'url(' + background_image + ')' }">
     <v-row align="center" justify="center" class="my-10" no-gutters>
       <v-col sm="6" cols="13" :class="$vuetify.display.mobile?'text-center':'text-right'">
-        <p class="text-secondary2 font-weight-bold mb-5" :class="$vuetify.display.mobile?'text-subtitle-1':'text-h6'">
+        <p class="font-weight-bold mb-5 text-theme-stroke-3 " :class="$vuetify.display.mobile?'text-subtitle-1':'text-h6'">
           Want to build your digital Product?</p>
-        <h1 class="font-weight-bold text-primary-darken-2" :class="$vuetify.display.mobile?'text-h4 ':'text-h2'"> Let's
+        <h1 class="font-weight-bold text-theme-stroke-12" :class="$vuetify.display.mobile?'text-h4 ':'text-h2'"> Let's
           Talk </h1>
-        <p class=" mt-2 text-secondary font-weight-regular mb-5"
+        <p class=" mt-2 text-theme-stroke-12 fw-450 opacity-7 mb-5"
            :class="$vuetify.display.mobile?'text-subtitle-1':'text-h6'">
           Whether you need a full product, consultation, tech investments
           or an extended team, our expert
@@ -47,7 +47,7 @@
                   :rules="[$rules.REQUIRED_FIELD('Description')]"
               ></v-textarea>
               <center>
-                <v-btn color="secondary" width="210" height="50" class="send-btn" type="submit">
+                <v-btn color="theme-stroke-3" width="210" height="50" class="send-btn" type="submit">
                   <span class="text-white font-weight-bold text-subtitle-1">Send</span>
                 </v-btn>
               </center>
@@ -60,13 +60,14 @@
 </template>
 <style lang="scss">
 .send-btn {
-  box-shadow: 3px 12px 17px #B7FFFB;
+  box-shadow: 3px 12px 17px rgb(var(--v-theme-theme-stroke-3),0.4);
+  //box-shadow: 3px 12px 17px #B7FFFB;
 }
 
 .contact-card {
   backdrop-filter: blur(10px);
   backdrop-filter: saturate(200%) blur(10px);
-  background-color: rgb(var(--v-theme-surface), 0.1);
+  background-color: rgb(var(--v-theme-surface), 0.75);
   border-radius: 12px;
   max-width: 400px;
   -webkit-box-shadow: 0px 36px 58px 11px rgba(0, 0, 0, 0.25);

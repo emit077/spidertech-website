@@ -8,6 +8,7 @@ body {
   //overflow-x: hidden;
 }
 
+
 .mw-100 {
   max-width: 90%;
   position: relative;
@@ -21,6 +22,10 @@ body {
 
 .fw-450 {
   font-weight: 450 !important;
+}
+
+.fs-20 {
+  font-size: 20px;
 }
 
 
@@ -52,6 +57,15 @@ $font-family: "Poppins";
     padding-left: 7%;
     padding-right: 7%;
   }
+}
+
+
+.opacity-7 {
+  opacity: 0.7;
+}
+
+.opacity-8 {
+  opacity: 0.8;
 }
 
 

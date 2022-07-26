@@ -2,7 +2,7 @@
   <div class="app-padding py-3 d-flex align-center" id="app-bar">
     <div class="d-inline-block w-25" v-if="header">
       <router-link to="/" class="router-link">
-        <strong class="font-weight-bold" :class="$vuetify.display.mobile?'text-h6':'text-h4'">Spidertech</strong>
+        <strong class="font-weight-bold text-theme-stroke-1" :class="$vuetify.display.mobile?'text-h6':'text-h4'">Spidertech</strong>
       </router-link>
     </div>
     <!--    <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/color-logo.svg')" alt="logo" class="app-logo"-->
@@ -16,7 +16,7 @@
           <span class="ml-8 d-inline-block" v-if="item.link && $route.name==item.link_page">
             <a href="#" @click.prevent="onLinkClick(item.link)" class="text-center router-link">
               <center>
-                <span class="un"> {{ item.title }}</span>
+                <span class="un" :class="'nav-link-'+$vuetify.theme.global.name"> {{ item.title }}</span>
               </center>
             </a>
           </span>
@@ -24,7 +24,7 @@
             <router-link class="router-link " :to="{ name: item.route_name}">
               <center>
                 <span class="un"
-                      :class="$route.name==item.route_name?'text-un':''"
+                      :class="$route.name==item.route_name?'text-un '+'nav-link-'+$vuetify.theme.global.name:'nav-link-'+$vuetify.theme.global.name"
                 >  {{ item.title }}</span>
               </center>
             </router-link>
@@ -40,7 +40,7 @@
             <v-icon v-else size="x-large" v-bind="props">mdi-menu</v-icon>
           </template>
           <div class="text-center py-4 mobile-navigation-menu" :style="menu_style">
-          <div v-for="(item,i) in nav_link_list" :key="i" class="align-center text-secondary">
+            <div v-for="(item,i) in nav_link_list" :key="i" class="align-center text-theme-stroke-2">
             <span class="my-2 d-inline-block" v-if="item.link && $route.name==item.link_page">
               <a href="#" @click.prevent="onLinkClick(item.link)" class="text-center router-link">
                 <center>
@@ -76,12 +76,22 @@
   backdrop-filter: blur(10px);
   transition-duration: 500ms;
   transform-origin: bottom;
+  background-color:  rgb(var(--v-theme-theme-fill-1));
+
+  .nav-link-theme1 {
+    color: rgb(var(--v-theme-theme-stroke-2), 1);
+  }
+
+  .nav-link-theme2 {
+    color: rgb(var(--v-theme-theme-stroke-2), 1);
+  }
 
   .un {
     font-weight: 450;
-    color: rgb(var(--v-theme-secondary), 1);
+    //color: rgb(var(--v-theme-theme-stroke-2), 1);
     text-decoration: none;
   }
+
 
   .un:after {
     content: '';
@@ -89,7 +99,7 @@
     height: 2px;
     margin-top: 3px;
     display: block;
-    background: rgb(var(--v-theme-secondary), 1);
+    background: rgb(var(--v-theme-theme-stroke-2), 1);
     transition-duration: 800ms;
   }
 
@@ -98,7 +108,7 @@
   }
 
   .text-un {
-    color: rgb(var(--v-theme-secondary), 1) !important;
+    color: rgb(var(--v-theme-theme-stroke-2), 1) !important;
   }
 
   .text-un::after {
@@ -135,7 +145,7 @@ export default {
         else
           APP_BAR.style.height = document.scrollingElement.scrollTop < 50 ? "100px" : "60px"
         // APP_BAR.style.backgroundColor = document.scrollingElement.scrollTop < screen.height ? "transparent" : "rgb(var(--v-theme-primary), 0.1)"
-        APP_BAR.style.backgroundColor = document.scrollingElement.scrollTop < screen.height ? "transparent" : "rgb(var(--v-theme-surface), 0.8)"
+        APP_BAR.style.backgroundColor = document.scrollingElement.scrollTop < screen.height ? "rgb(var(--v-theme-theme-fill-1), 1)" : "rgb(var(--v-theme-theme-fill-1), 0.8)"
       }
     }.bind(this));
     setTimeout(() => {

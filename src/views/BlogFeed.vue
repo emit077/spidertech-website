@@ -11,7 +11,7 @@
         </v-avatar>
       </div>
       <div class="d-inline-block align-center ml-2">
-        <p class="text-body-1 fw-450 text-secondary2"> {{ blog_data.author_name }}</p>
+        <p class="text-body-1 fw-450 text-theme-stroke-3"> {{ blog_data.author_name }}</p>
         <v-divider></v-divider>
         <p class="text-subtitle-2">{{ blog_data.date }}</p>
       </div>
@@ -23,14 +23,14 @@
       <div v-if="data.type=='heading'">
         <h1 v-if="data.title"
             :class="$vuetify.display.mobile?data.m_class_name||'text-h5' :data.class_name||'text-h4'"
-            class="font-weight-bold text-left text-secondary2" v-html="data.title">
+            class="font-weight-bold text-left text-theme-stroke-3" v-html="data.title">
         </h1>
       </div>
       <!-- paragraph -->
       <div v-if="data.type=='paragraph'">
         <div
             :class=" $vuetify.display.mobile?blog_data.m_class_name||'text-h6' :blog_data.class_name||'text-h5'"
-            class="mb-3 font-weight-bold text-secondary2"
+            class="mb-3 font-weight-bold text-theme-stroke-3"
             v-html="data.paragraph_title">
         </div>
         <p class="paragraph-text" :class="data.class_name" v-html="data.text"></p>
@@ -62,7 +62,7 @@
 
     <div class="text-right my-5">
       <router-link class="router-link" :to="{ name:'blogs'}">
-        <v-btn color="secondary" variant="outlined" rounded> Read More</v-btn>
+        <v-btn color="theme-stroke-2" variant="outlined" rounded> Read More</v-btn>
       </router-link>
     </div>
     <!-- suggestions -->

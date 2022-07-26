@@ -1,5 +1,5 @@
 <template>
-  <v-app theme="theme1">
+  <v-app :theme="'theme2'" class="">
     <app-bar/>
     <v-main>
       <router-view/>

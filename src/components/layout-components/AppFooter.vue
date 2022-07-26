@@ -21,7 +21,7 @@
       </v-col>
       <v-col md="2" cols="6" class="text-left py-5">
         <div class="px-3">
-          <p class="text-secondary mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Our Services</p>
+          <p class="text-theme-stroke-2 mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Our Services</p>
           <ol class="link-style">
             <li class="text-white pb-2">Web development</li>
             <li class="text-white pb-2">UI/UX designing</li>
@@ -32,7 +32,7 @@
       </v-col>
       <v-col md="2" cols="6" class="text-left py-5">
         <div class="px-3">
-          <p class=" text-secondary  mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Quick
+          <p class=" text-theme-stroke-2  mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Quick
             Links</p>
           <ol class="link-style">
             <!--            <li class="text-white pb-2" v-for="(item,i) in nav_link_list" :key="i">-->
@@ -60,7 +60,7 @@
       </v-col>
       <v-col md="3" cols="12" class="text-left py-5">
         <div class="px-3">
-          <p class="text-secondary  mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Quick
+          <p class="text-theme-stroke-2  mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Quick
             Contact</p>
           <div class="text-white d-flex align-center mb-3">
             <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/call.svg')" alt=""

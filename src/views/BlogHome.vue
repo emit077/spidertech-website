@@ -15,7 +15,7 @@
       <v-col sm="6" cols="12" class="justify-center"
              :class="$vuetify.display.mobile?'text-center ':' text-left'">
         <div class="pa-4">
-          <p class="font-weight-bold text-primary" :class="$vuetify.display.mobile?'text-h4 ':'text-h2'"
+          <p class="font-weight-bold text-theme-stroke-12 opacity-7" :class="$vuetify.display.mobile?'text-h4 ':'text-h2'"
              v-html="recentBlog.title"></p>
 
           <div class="px-3 pb-1 pt-2 mt-4 text-left">

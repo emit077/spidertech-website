@@ -1,11 +1,10 @@
 <template>
-  <div class="" id="what-we-do">
+  <div class="bg-theme-fill-1" id="what-we-do">
     <div v-for="(service,i) in service_list" :key="i"
          class="app-padding"
          :class="$vuetify.display.mobile?'no-bg':service.class"
          style="margin-top: -1px"
          :style="service.bg_img?{ backgroundImage : 'url('+ require('@/assets/'+this.$vuetify.theme.global.name+'/'+service.bg_img)+')' }:''">
-
 
       <div class="py-7" v-if="i%2==0">
         <v-row align="center" justify="center" no-gutters
@@ -17,10 +16,10 @@
           <v-col sm="6" cols="12" class="justify-center py-10"
                  :class="$vuetify.display.mobile?' text-center ':'  text-right'">
             <!--        <div class="border-sub-text mb-3"> Customer Service</div>-->
-            <p class="font-weight-bold text-primary" :class="$vuetify.display.mobile?'text-h5 ':' text-h3'">
+            <p class="font-weight-bold text-theme-stroke-1" :class="$vuetify.display.mobile?'text-h5 ':' text-h3'">
               {{ service.title }}
             </p>
-            <p class=" mt-3 text-secondary" :class="$vuetify.display.mobile?'text-subtitle-1 ':' text-h6'">
+            <p class=" mt-3 text-theme-stroke-2" :class="$vuetify.display.mobile?'text-subtitle-1 ':' text-h6'">
               {{ service.description }}
             </p>
           </v-col>
@@ -37,10 +36,10 @@
           <v-col sm="6" cols="12" class="justify-center py-10"
                  :class="$vuetify.display.mobile?' text-center ':'  text-left'">
             <!--        <div class="border-sub-text mb-3"> Customer Service</div>-->
-            <p class=" font-weight-bold text-primary" :class="$vuetify.display.mobile?'text-h5 ':' text-h3'">
+            <p class=" font-weight-bold text-theme-stroke-1" :class="$vuetify.display.mobile?'text-h5 ':' text-h3'">
               {{ service.title }}
             </p>
-            <p class=" mt-3 text-secondary" :class="$vuetify.display.mobile?'text-subtitle-1 ':' text-h6'">
+            <p class=" mt-3 text-theme-stroke-2" :class="$vuetify.display.mobile?'text-subtitle-1 ':' text-h6'">
               {{ service.description }}
             </p>
           </v-col>

@@ -1,13 +1,13 @@
 <template>
   <div class="app-padding d-flex align-center" id="landing-screen"
-       :style="style" :class="$vuetify.display.mobile?'mt-5':'text-h6'">
+       :style="style" :class="$vuetify.display.mobile?'pt-5':'text-h6'">
     <v-row align="center" justify="center" no-gutters>
       <v-col sm="6" cols="12" class="justify-center" :class="$vuetify.display.mobile?'text-center ':' text-left'">
         <div class="pb-5">
-          <h1 class="font-weight-bold text-primary" :class="$vuetify.display.mobile?'text-h4 ':'text-h2'">
+          <h1 class="font-weight-bold text-theme-stroke-1" :class="$vuetify.display.mobile?'text-h4 ':'text-h2'">
             We build digital products for your success
           </h1>
-          <p class="text-secondary" :class="$vuetify.display.mobile?'text-subtitle-1 mb-5 mt-4':'text-h6 mt-6'">
+          <p class="text-theme-stroke-2" :class="$vuetify.display.mobile?'text-subtitle-1 mb-5 mt-4':'text-h6 mt-6'">
             Scale your business with <br> our great products
           </p>
         </div>

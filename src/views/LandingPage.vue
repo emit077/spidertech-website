@@ -1,6 +1,6 @@
 <template>
   <div>
-    <home-screen/>
+    <home-screen class="bg-theme-fill-1" />
     <our-domain/>
     <what-we-do/>
     <tech-stack/>
