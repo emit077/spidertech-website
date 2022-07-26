@@ -44,10 +44,10 @@
       </v-col>
       <v-col sm="1" cols="12" :class="$vuetify.display.mobile?'text-center ':'text-right'">
         <div>
-          <v-btn variant="outlined" color="theme-stroke-2" class="control-btn ma-2" @click="changeSlide('previous')">
+          <v-btn variant="outlined" color="rgb(var(--v-theme-theme-stroke-2),0.8)" class="control-btn ma-2" @click="changeSlide('previous')">
             <v-icon size="x-large">mdi-chevron-left</v-icon>
           </v-btn>
-          <v-btn variant="outlined" color="theme-stroke-2" class="control-btn ma-2" @click="changeSlide('next')">
+          <v-btn variant="outlined"  color="rgb(var(--v-theme-theme-stroke-2),0.8)"  class="control-btn ma-2" @click="changeSlide('next')">
             <v-icon size="x-large">mdi-chevron-right</v-icon>
           </v-btn>
         </div>

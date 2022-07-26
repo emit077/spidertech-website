@@ -9,7 +9,11 @@ import rules from "@/helper/rules";
 import urls from "@/helper/urls";
 import globalMixin from "@/helper/mixins/global-mixin";
 
+import "aos/dist/aos.css";
+import AOS from "aos";
+
 loadFonts()
+AOS.init();
 
 
 const app = createApp(App)

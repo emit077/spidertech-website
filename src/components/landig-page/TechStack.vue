@@ -2,14 +2,14 @@
   <!--  <div :style="{ backgroundImage : 'url('+ require('@/assets/'+this.$vuetify.theme.global.name+'/codeBG.png')+')' }" class="tech-stack-card-wrapper">-->
   <div class="tech-stack-card-wrapper">
     <div class="app-padding py-15 justify-center text-center align-center">
-      <p class="text-h5 text-theme-stroke-2 mb-8 font-weight-bold">The power of technology in our hands</p>
+      <p class="text-h5 text-theme-stroke-2 mb-8 font-weight-bold">We are working with</p>
       <div v-for="(tech,i) in tech_stacks" :key="i" class="d-inline-flex tech-stack-card"
            :class="$vuetify.display.mobile?'my-5':'my-8 '">
         <div class="d-flex align-center justify-center elevation-1"
              :class="$vuetify.display.mobile?' mx-2 px-3 ':' px-3 py-1 mx-4'">
           <img :src="tech.img" alt="" :width="tech.width||40" class="">
           <span class="text-h5 mx-2 font-weight-light">|</span>
-          <span class="tech-title text-theme-stroke-2">{{ tech.title }}</span>
+          <span class="tech-title">{{ tech.title }}</span>
         </div>
       </div>
     </div>
@@ -24,7 +24,6 @@
 
 .tech-stack-card {
   font-weight: 450;
-  filter: grayscale(100%);
 
   div {
     border-radius: 5px;
@@ -33,17 +32,17 @@
 
   img {
     transition-duration: 4s;
-    //filter: grayscale(100%);
+    filter: grayscale(100%);
     z-index: 100;
     transform-origin: right;
   }
 }
 
 .tech-stack-card:hover {
-  filter: grayscale(0%) !important;
-  color: rgb(var(v--theme-));
+  color: rgb(var(v--theme-strock-12));
 
   img {
+     filter: grayscale(0%) !important;
     transition-duration: 1s;
     transform: scale(1.3);
     transform-origin: right;

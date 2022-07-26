@@ -4,7 +4,14 @@
          class="app-padding"
          :class="$vuetify.display.mobile?'no-bg':service.class"
          style="margin-top: -1px"
-         :style="service.bg_img?{ backgroundImage : 'url('+ require('@/assets/'+this.$vuetify.theme.global.name+'/'+service.bg_img)+')' }:''">
+         :style="service.bg_img?{ backgroundImage : 'url('+ require('@/assets/'+this.$vuetify.theme.global.name+'/'+service.bg_img)+')' }:''"
+         data-aos="fade-up"
+         data-aos-offset="150"
+         data-aos-delay="10"
+         data-aos-duration="400"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+    >
 
       <div class="py-7" v-if="i%2==0">
         <v-row align="center" justify="center" no-gutters
@@ -75,7 +82,7 @@
   left: -260px;
   top: 1500px;
   z-index: 1;
-  animation: spin360 80s linear infinite;
+  animation: spin360 60s linear infinite;
 }
 
 .no-bg {

@@ -1,8 +1,10 @@
 <template>
-  <div id="lets-talk" class="py-15 app-padding contact-section" :style="{ backgroundImage : 'url(' + background_image + ')' }">
+  <div id="lets-talk" class="py-15 app-padding contact-section"
+       :style="{ backgroundImage : 'url(' + background_image + ')' }">
     <v-row align="center" justify="center" class="my-10" no-gutters>
       <v-col sm="6" cols="13" :class="$vuetify.display.mobile?'text-center':'text-right'">
-        <p class="font-weight-bold mb-5 text-theme-stroke-3 " :class="$vuetify.display.mobile?'text-subtitle-1':'text-h6'">
+        <p class="font-weight-bold mb-5 text-theme-stroke-3 "
+           :class="$vuetify.display.mobile?'text-subtitle-1':'text-h6'">
           Want to build your digital Product?</p>
         <h1 class="font-weight-bold text-theme-stroke-12" :class="$vuetify.display.mobile?'text-h4 ':'text-h2'"> Let's
           Talk </h1>
@@ -14,11 +16,19 @@
         </p>
       </v-col>
       <v-col sm="6" cols="13" class="text-right">
-        <div class="mx-auto contact-card" max-width="400">
+        <div class="mx-auto contact-card" max-width="400"
+             :data-aos="$vuetify.display.mobile?'fade-up':'fade-left'"
+             data-aos-offset="100"
+             data-aos-delay="50"
+             data-aos-duration="800"
+             data-aos-easing="ease-in-out"
+             data-aos-mirror="true"
+        >
           <v-card-text :class="$vuetify.display.mobile?'px-6 py-8':'px-10 py-8'">
             <v-form ref="contact_form" v-model="valid" lazy-validation @submit.prevent="submitQueryForm()">
               <v-text-field
                   v-model="name"
+                  color="rgb(var(--v-theme-theme-stroke-3),0.7)"
                   label="Your Name"
                   density="comfortable"
                   :rules="[$rules.REQUIRED_FIELD('Name')]"
@@ -26,6 +36,7 @@
 
               <v-text-field
                   v-model="mobile"
+                  color="rgb(var(--v-theme-theme-stroke-3),0.7)"
                   maxlength="10"
                   label="Mobile"
                   density="comfortable"
@@ -33,6 +44,8 @@
               ></v-text-field>
 
               <v-text-field
+                  color="rgb(var(--v-theme-theme-stroke-3),0.7)"
+                  maxlength="320"
                   v-model="email"
                   label="Email"
                   density="comfortable"
@@ -40,6 +53,7 @@
               ></v-text-field>
 
               <v-textarea
+                  color="rgb(var(--v-theme-theme-stroke-3),0.7)"
                   v-model="description"
                   label="Description"
                   density="comfortable"
@@ -60,7 +74,7 @@
 </template>
 <style lang="scss">
 .send-btn {
-  box-shadow: 3px 12px 17px rgb(var(--v-theme-theme-stroke-3),0.4);
+  box-shadow: 3px 12px 17px rgb(var(--v-theme-theme-stroke-3), 0.4);
   //box-shadow: 3px 12px 17px #B7FFFB;
 }
 

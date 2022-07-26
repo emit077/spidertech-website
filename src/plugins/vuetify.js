@@ -38,11 +38,11 @@ export default createVuetify({
       theme2: {
         colors: {
           surface: "#ffffff",
-          primary: "#2A3E72",
+          primary: "#00fffa",
           secondary: "#03DAC6",
-          heading:"042070",
+          heading:"#042070",
           error: "#B00020",
-          info: "#2196F3",
+          info: "#00fffa",
           success: "#4CAF50",
           warning: "#FB8C00",
 
