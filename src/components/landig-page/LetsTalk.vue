@@ -97,7 +97,11 @@
 </style>
 
 <script>
-export default {
+
+import {createUser} from "@/firebase-config";
+import {defineComponent,} from 'vue'
+
+export default defineComponent({
   name: 'LetsTalk',
   components: {},
   data() {
@@ -118,7 +122,15 @@ export default {
       this.$refs.contact_form.validate()
       if (!this.valid)
         return false
+      let params = {
+        name: this.name,
+        mobile: this.mobile,
+        email: this.email,
+        description: this.description,
+        date_time: new Date(),
+      }
+      createUser(params)
     }
   }
-};
+});
 </script>
