@@ -1,5 +1,5 @@
 <template>
-  <div class="app-padding pb-10" :class="'testimonial-bg-'+$vuetify.theme.global.name">
+  <div class="app-padding pb-10 mt-n1" :class="'testimonial-bg-'+$vuetify.theme.global.name">
     <v-row align="center" justify="center" no-gutters>
       <v-col sm="11" cols="12">
         <v-carousel

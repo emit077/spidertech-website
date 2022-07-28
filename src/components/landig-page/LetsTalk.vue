@@ -74,8 +74,7 @@
 </template>
 <style lang="scss" scoped>
 .send-btn {
-  box-shadow: 0 7px 20px 0 rgba(var(--v-theme-theme-stroke-3), 0.3);
-  //box-shadow: 3px 12px 17px rgb(var(--v-theme-theme-stroke-3), 0.4);
+  box-shadow: 0 7px 20px 0 rgba(var(--v-theme-theme-stroke-3), 0.3)
 }
 
 .contact-card {

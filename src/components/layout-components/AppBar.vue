@@ -65,7 +65,7 @@
   </div>
 </template>
 <!--  style  -->
-<style lang="scss">
+<style lang="scss" scoped>
 #app-bar {
   position: sticky;
   top: 0;
