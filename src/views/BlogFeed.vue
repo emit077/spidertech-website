@@ -62,7 +62,7 @@
 
     <div class="text-right my-5">
       <router-link class="router-link" :to="{ name:'blogs'}">
-        <v-btn color="theme-stroke-2" variant="outlined" rounded> Read More</v-btn>
+        <v-btn color="theme-stroke-12" variant="outlined" rounded> Read More</v-btn>
       </router-link>
     </div>
     <!-- suggestions -->

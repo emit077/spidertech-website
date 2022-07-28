@@ -21,7 +21,8 @@
       </v-col>
       <v-col md="2" cols="6" class="text-left py-5">
         <div class="px-3">
-          <p class="text-theme-stroke-2 mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Our Services</p>
+          <p class="text-theme-stroke-2 mb-3" :class="$vuetify.display.mobile?'text-subtitle-1 ':'text-h6'"> Our
+            Services</p>
           <ol class="link-style">
             <li class="text-white pb-2">Web development</li>
             <li class="text-white pb-2">UI/UX designing</li>
@@ -40,14 +41,14 @@
           <span class="d-inline-block pb-2" v-if="item.link && $route.name==item.link_page">
             <a href="#" @click.prevent="onLinkClick(item.link)" class="router-link">
               <center>
-                <span class="un"> {{ item.title }}</span>
+                <span class="hover-underline"> {{ item.title }}</span>
               </center>
             </a>
           </span>
               <span class="d-inline-block pb-2" v-else-if="item.route_name">
             <router-link class="router-link " :to="{ name: item.route_name}">
               <center>
-                <span class="un text-white"
+                <span class="hover-underline text-white"
                       :class="$route.name==item.route_name?'text-un':''"
                 >  {{ item.title }}</span>
               </center>
@@ -64,11 +65,11 @@
             Contact</p>
           <div class="text-white d-flex align-center mb-3">
             <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/call.svg')" alt=""
-                 class="d-inline-flex mr-3">+91 1234567890
+                 class="d-inline-flex mr-3">{{ contact_number }}
           </div>
           <div class="text-white">
             <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/mail.svg')" alt=""
-                 class="d-inline-flex mr-3">hello.spidertech@gmail.com
+                 class="d-inline-flex mr-3">{{ contact_email }}
           </div>
         </div>
       </v-col>
@@ -85,7 +86,7 @@
 
   </v-footer>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .footer-wrapper {
   background-color: #1F2020;
 
@@ -106,6 +107,7 @@
     text-decoration: none;
   }
 
+
   .l-border {
     height: 100% !important;
     border-left: solid 1px;
@@ -117,11 +119,8 @@
     color: white;
   }
 
-  .rocket-illustration {
-    position: absolute;
-    bottom: 0px;
-    right: -20px;
-    width: 450px;
+  .hover-underline:hover {
+    text-decoration: underline;
 
   }
 }
@@ -132,6 +131,8 @@ export default {
   name: "AppFooter",
   data: () => ({
     footer: false,
+    contact_number: "+91 8839737938",
+    contact_email: "hello.spidertech@gmail.com",
     contact_list: [
       {
         icon: "mdi-facebook",
