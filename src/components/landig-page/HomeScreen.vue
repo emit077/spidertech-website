@@ -7,9 +7,14 @@
           <h1 class="font-weight-bold text-theme-stroke-1" :class="$vuetify.display.mobile?'text-h4 ':'text-h2'">
             We build digital products for your success
           </h1>
-          <p class="text-theme-stroke-2" :class="$vuetify.display.mobile?'text-subtitle-1 mb-5 mt-4':'text-h6 mt-6'">
+          <p class="text-theme-stroke-2" :class="$vuetify.display.mobile?'text-subtitle-1 mb-5 mt-4':'text-h6 my-6'">
             Scale your business with <br> our great products
           </p>
+
+          <v-btn color="theme-stroke-2" variant="outlined" rounded width="210" height="50" class="lets-talk-btn"
+                 :class="$vuetify.display.mobile?'mt-4':'mt-6'">
+            <span class="text-theme-stroke-2 font-weight-bold text-subtitle-1">Let's Talk</span>
+          </v-btn>
         </div>
       </v-col>
       <v-col sm="6" cols="12" class="text-right">
@@ -25,6 +30,11 @@
   background-position: bottom;
   background-size: contain;
 }
+
+.lets-talk-btn {
+  box-shadow: 0 7px 10px 0 rgba(var(--v-theme-theme-stroke-3), 0.2);
+}
+
 </style>
 <!--   -->
 <script>
