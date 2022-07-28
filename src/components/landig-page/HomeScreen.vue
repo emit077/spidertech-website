@@ -10,10 +10,11 @@
           <p class="text-theme-stroke-2" :class="$vuetify.display.mobile?'text-subtitle-1 mb-5 mt-4':'text-h6 my-6'">
             Scale your business with <br> our great products
           </p>
-          <v-btn color="theme-stroke-1" variant="outlined" rounded width="210" height="50" class="Lets-talk-btn"
-                 :class="$vuetify.display.mobile?'mt-2':'mt-6'"
-                 type="submit">
-            <span class="text-white font-weight-bold text-subtitle-1">Let's Talk</span>
+
+          <v-btn color="theme-stroke-2" variant="outlined" rounded width="210" height="50" class="lets-talk-btn"
+                 :class="$vuetify.display.mobile?'mt-4':'mt-6'">
+            <span class="text-theme-stroke-2 font-weight-bold text-subtitle-1">Let's Talk</span>
+
           </v-btn>
         </div>
       </v-col>
@@ -31,11 +32,10 @@
   background-size: contain;
 }
 
-.Lets-talk-btn {
-  //box-shadow: 0 7px 20px 0 rgba(var(--v-theme-theme-stroke-3), 0.3);
-  //box-shadow: 3px 12px 17px rgb(var(--v-theme-theme-stroke-3), 0.4);
-  //box-shadow: 3px 12px 17px #B7FFFB;
+.lets-talk-btn {
+  box-shadow: 0 7px 10px 0 rgba(var(--v-theme-theme-stroke-3), 0.2);
 }
+
 </style>
 <!--   -->
 <script>
