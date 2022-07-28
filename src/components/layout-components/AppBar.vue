@@ -44,14 +44,14 @@
             <span class="my-2 d-inline-block" v-if="item.link && $route.name==item.link_page">
               <a href="#" @click.prevent="onLinkClick(item.link)" class="text-center router-link">
                 <center>
-                  <span class="un"> {{ item.title }}</span>
+                  <span class=""> {{ item.title }}</span>
                 </center>
               </a>
             </span>
               <span class="my-2 d-inline-block" v-else-if="item.route_name">
             <router-link class="router-link " :to="{ name: item.route_name}">
               <center>
-                <span class="un"
+                <span class=""
                       :class="$route.name==item.route_name?'text-un':''"
                 >  {{ item.title }}</span>
               </center>
@@ -86,34 +86,6 @@
     color: rgb(var(--v-theme-theme-stroke-2), 1);
   }
 
-  .un {
-    font-weight: 450;
-    //color: rgb(var(--v-theme-theme-stroke-2), 1);
-    text-decoration: none;
-  }
-
-
-  .un:after {
-    content: '';
-    width: 0px;
-    height: 2px;
-    margin-top: 3px;
-    display: block;
-    background: rgb(var(--v-theme-theme-stroke-2), 1);
-    transition-duration: 800ms;
-  }
-
-  .un:hover:after {
-    width: 80%;
-  }
-
-  .text-un {
-    color: rgb(var(--v-theme-theme-stroke-2), 1) !important;
-  }
-
-  .text-un::after {
-    width: 80% !important;
-  }
 }
 
 .mobile-navigation-menu {

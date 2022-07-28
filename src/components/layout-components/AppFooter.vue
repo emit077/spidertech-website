@@ -137,17 +137,17 @@ export default {
         icon: "mdi-facebook",
         link: "https://www.facebook.com/Spidertechin-109532415172906",
       },
-      {
-        icon: "mdi-linkedin",
-        link: "https://www.linkedin.com/in/amit-kumar-sahu-705a06137",
-      },
-      {
-        icon: "mdi-stack-overflow",
-        link: "https://stackoverflow.com/users/10175889/amit",
-      },
+      // {
+      //   icon: "mdi-linkedin",
+      //   link: "https://www.linkedin.com/in/amit-kumar-sahu-705a06137",
+      // },
       {
         icon: "mdi-instagram",
-        link: "https://www.instagram.com/emit077/",
+        link: "https://www.instagram.com/spidertech.in/?igshid=YmMyMTA2M2Y%3D",
+      },
+      {
+        icon: "mdi-twitter",
+        link: "https://twitter.com/SpiderTech777",
       },
     ],
   }),

@@ -9,7 +9,7 @@ export default {
       nav_link_list: [
         {
           title: "Home",
-          link: "landing-screen",
+          link: "app",
           link_page: "home",
           route_name: 'home',
         },

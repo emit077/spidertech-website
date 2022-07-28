@@ -12,7 +12,8 @@
           </p>
 
           <v-btn color="theme-stroke-2" variant="outlined" rounded width="210" height="50" class="lets-talk-btn"
-                 :class="$vuetify.display.mobile?'mt-4':'mt-6'">
+                 :class="$vuetify.display.mobile?'mt-4':'mt-6'"
+                 @click="onLinkClick('lets-talk')">
             <span class="text-theme-stroke-2 font-weight-bold text-subtitle-1">Let's Talk</span>
 
           </v-btn>

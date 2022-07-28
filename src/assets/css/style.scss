@@ -8,6 +8,10 @@ body {
   //overflow-x: hidden;
 }
 
+body, html {
+  scroll-behavior: smooth;
+}
+
 
 .mw-100 {
   max-width: 90%;
@@ -66,6 +70,35 @@ $font-family: "Poppins";
 
 .opacity-8 {
   opacity: 0.8;
+}
+
+/* text underline on hover effect */
+.un {
+  font-weight: 450;
+  //color: rgb(var(--v-theme-theme-stroke-2), 1);
+  text-decoration: none;
+}
+
+.un:after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  margin-top: 3px;
+  display: block;
+  background: rgb(var(--v-theme-theme-stroke-2), 1);
+  transition-duration: 800ms;
+}
+
+.un:hover:after {
+  width: 80%;
+}
+
+.text-un {
+  color: rgb(var(--v-theme-theme-stroke-2), 1) !important;
+}
+
+.text-un::after {
+  width: 80% !important;
 }
 
 
