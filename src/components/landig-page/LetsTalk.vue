@@ -61,7 +61,7 @@
                   :rules="[$rules.REQUIRED_FIELD('Description')]"
               ></v-textarea>
               <center>
-                <v-btn color="theme-stroke-3" width="210" height="50" class="send-btn" type="submit">
+                <v-btn color="theme-stroke-3" rounded width="210" height="50" class="send-btn" type="submit">
                   <span class="text-white font-weight-bold text-subtitle-1">Send</span>
                 </v-btn>
               </center>
@@ -72,9 +72,10 @@
     </v-row>
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .send-btn {
-  box-shadow: 3px 12px 17px rgb(var(--v-theme-theme-stroke-3), 0.4);
+  box-shadow: 0 7px 20px 0 rgba(var(--v-theme-theme-stroke-3), 0.3);
+  //box-shadow: 3px 12px 17px rgb(var(--v-theme-theme-stroke-3), 0.4);
   //box-shadow: 3px 12px 17px #B7FFFB;
 }
 

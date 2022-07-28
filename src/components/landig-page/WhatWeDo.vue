@@ -12,7 +12,6 @@
          data-aos-easing="ease-in-out"
          data-aos-mirror="true"
     >
-
       <div class="py-7" v-if="i%2==0">
         <v-row align="center" justify="center" no-gutters
                :class="$vuetify.display.mobile?'text-center':'py-15 text-left'">
@@ -23,12 +22,16 @@
           <v-col sm="6" cols="12" class="justify-center py-10"
                  :class="$vuetify.display.mobile?' text-center ':'  text-right'">
             <!--        <div class="border-sub-text mb-3"> Customer Service</div>-->
-            <p class="font-weight-bold text-theme-stroke-1" :class="$vuetify.display.mobile?'text-h5 ':' text-h3'">
-              {{ service.title }}
+            <p class="font-weight-bold text-theme-stroke-1" :class="$vuetify.display.mobile?'text-h5 ':' text-h3'"
+               v-html="service.title">
             </p>
-            <p class=" mt-3 text-theme-stroke-2" :class="$vuetify.display.mobile?'text-subtitle-1 ':' text-h6'">
+
+            <p class=" mt-7 text-theme-stroke-2" :class="$vuetify.display.mobile?'text-subtitle-1 ':' text-h6'">
               {{ service.description }}
             </p>
+            <div :class="$vuetify.display.mobile?' text-center ':'  text-right'">
+              <div class="line-style d-inline-block"></div>
+            </div>
           </v-col>
         </v-row>
       </div>
@@ -43,12 +46,14 @@
           <v-col sm="6" cols="12" class="justify-center py-10"
                  :class="$vuetify.display.mobile?' text-center ':'  text-left'">
             <!--        <div class="border-sub-text mb-3"> Customer Service</div>-->
-            <p class=" font-weight-bold text-theme-stroke-1" :class="$vuetify.display.mobile?'text-h5 ':' text-h3'">
-              {{ service.title }}
-            </p>
-            <p class=" mt-3 text-theme-stroke-2" :class="$vuetify.display.mobile?'text-subtitle-1 ':' text-h6'">
+            <p class=" font-weight-bold text-theme-stroke-1" :class="$vuetify.display.mobile?'text-h5 ':' text-h3'"
+               v-html="service.title"></p>
+            <p class=" mt-7 text-theme-stroke-2" :class="$vuetify.display.mobile?'text-subtitle-1 ':' text-h6'">
               {{ service.description }}
             </p>
+            <div :class="$vuetify.display.mobile?' text-center ':'  text-left'">
+              <div class="line-style d-inline-block"></div>
+            </div>
           </v-col>
           <v-col sm="6" cols="13" class="text-right" v-if="!$vuetify.display.mobile">
             <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/'+service.img_name)" alt="img"
@@ -65,6 +70,13 @@
   <!--      -->
 </template>
 <style lang="scss" scoped>
+.line-style {
+  background-color: rgb(var(--v-theme-theme-stroke-1), 1);
+  height: 3px;
+  border-radius: 5px;
+  width: 40px;
+  border-bottom:  rgb(var(--v-theme-theme-stroke-2), 1) 1px solid;
+}
 
 .border-sub-text {
   border: solid 2px;
@@ -99,7 +111,14 @@
   background-size: 50%;
 }
 
-
+@media screen and (min-width: 1600px) {
+  .background-bottom-right {
+    background-size: 38%;
+  }
+  .background-top-left {
+    background-size: 41%;
+  }
+}
 </style>
 
 <script>
