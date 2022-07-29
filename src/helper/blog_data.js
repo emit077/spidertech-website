@@ -87,6 +87,113 @@ export default {
           "m_class_name": ""
         }
       ]
+    },
+    //post 3
+    {
+      "post_id": "2",
+      "read_time": "4 Min Read",
+      "author_name": "Amit Kumar Sahu",
+      "author_img": require('@/assets/blog/authors/amit.png'),
+      "date": "29 July 2022",
+      "title": "5 Reasons Why Startups Fail",
+      "img_url": "https://cdn.pixabay.com/photo/2017/01/09/12/49/mistake-1966448_1280.jpg",
+      "items": [
+        {
+          "type": "img",
+          "url": "https://cdn.pixabay.com/photo/2017/01/09/12/49/mistake-1966448_1280.jpg",
+          "caption": "Photo by <a href='https://pixabay.com/users/tumisu-148124/'  target='_blank'>Tumisu</a> on  <a href='https://pixabay.com/'  target='_blank'>pixabay</a>",
+          "class_name": "text-right",
+          "m_class_name": "text-right"
+        },
+        {
+          "type": "heading",
+          "title": "5 Reasons Why Startups Fail",
+          "class_name": "",
+          "m_class_name": ""
+        },
+        {
+          "type": "paragraph",
+          "paragraph_title": "",
+          "text": "Startups are inherently riskier than established businesses. According to <a href='https://www.cbinsights.com/research/startup-failure-post-mortem/'  target='_blank'>CB Insights</a>, about 70% of startups fail usually within 20 months of raising finance." +
+            "<br/><br/>With a failure rate this high, it’s important for you as an entrepreneur to know the most common reasons why startups fail, so you can try to avoid them." +
+            "<br/><br/>While a reason is easy to define, it’ll be hard for you to notice it before it’s too late. So along with the reasons, we’ll also try to decode the patterns that lead to such startup failures.",
+          "class_name": "",
+          "m_class_name": ""
+        },
+        {
+          "type": "paragraph",
+          "paragraph_title": "1. Cash Crunch",
+          "text": "Money is the lifeblood of any business, especially startups. It is the key resource that is needed to keep the business running and to help it grow" +
+            "<br/><br/>If a startup doesn’t have enough money, it will quickly run into trouble." +
+            "And cash crunch is one of the most common reasons why startups fail." +
+            "<br/><br/>A startup can run out of cash because of the following reasons:" +
+            " <ul class='ml-8 mt-2'><li>   Failure to raise new capital</li>" +
+            "<li>  Bad allocation of resources </li> " +
+            "<li>  Mismanagement of funds </li> " +
+            "<li> Too much spending </li> " +
+            "<li> Lack of revenue</li>" +
+            "<li> Investors pull out their money</li></ul>",
+          "class_name": "",
+          "m_class_name": ""
+        },
+        {
+          "type": "paragraph",
+          "paragraph_title": "2. Legal Challenges",
+          "text": "Legalities play a big role in business. Startups have to ensure they’re adhering to all the laws and regulations in their industry, as well as any tariffs, zoning, and environmental protections that may apply to them." +
+            "<br/><br/>One company that ran into legal trouble was Coolest Cooler. Even though this Kickstarter campaign raised more than $13 million, the company couldn’t keep up with the increased tariff by the US government on products imported from China. This led to major production delays and a lot of unhappy customers." +
+            "<br/><br/>It’s important to clearly understand the legal landscape before starting your business. Hire or consult a lawyer and a CA to help you figure out what permits, licenses, and insurance you need.",
+          "class_name": "",
+          "m_class_name": ""
+        },
+        {
+          "type": "paragraph",
+          "paragraph_title": "3. Team And Internal Problems",
+          "text": "An incompetent team is one story; a toxic team is another.\n" +
+            "<br/><br/>No matter how talented and skilled individuals are, it’s all for nothing if they can’t work together.\n" +
+            "<br/><br/>Startups are built by teams, and if the team members don’t get along, it will have a negative impact on the company culture, productivity, and morale.\n" +
+            "<br/><br/>This was the case with the startup Housing.com.\n" +
+            "<br/><br/>The co-founder and CEO, Rahul Yadav, was known for his abrasive and arrogant behaviour. He wanted to take the company to a different direction it was originally supposed to go and he didn’t hesitate to voice his opinion, no matter how controversial it was.\n" +
+            "<br/><br/>This created a lot of tension within the team and the investors which eventually led to him being ousted from the company.\n" +
+            "<br/><br/>Team synergy is essential for a startup because it’s a small company and everyone needs to be on the same page in order to achieve the common goal.",
+          "class_name": "",
+          "m_class_name": ""
+        },
+        {
+          "type": "paragraph",
+          "paragraph_title": "4. Mistimed Product",
+          "text": "Launching too early or too late can be detrimental to your business. You need to ensure that there is a demand for your product or service and that you have the right team to execute your vision.\n" +
+            "<br/><br/>Around 10% of startup failures are due to a mistimed product launch. But most times, mistimed products can be corrected by pivoting your business model or finding a new market. This process, however, takes time, money, and a lot of effort.\n" +
+            "<br/><br/>In fact, Java was a mistimed product. It was originally designed for interactive television, but the market wasn’t ready for it. As a result, the team had to pivot and focus on creating a web browser that could run Java applets.",
+          "class_name": "",
+          "m_class_name": ""
+        },
+        {
+          "type": "paragraph",
+          "paragraph_title": "4. Mistimed Product",
+          "text": "Launching too early or too late can be detrimental to your business. You need to ensure that there is a demand for your product or service and that you have the right team to execute your vision.\n" +
+            "<br/><br/>Around 10% of startup failures are due to a mistimed product launch. But most times, mistimed products can be corrected by pivoting your business model or finding a new market. This process, however, takes time, money, and a lot of effort.\n" +
+            "<br/><br/>In fact, Java was a mistimed product. It was originally designed for interactive television, but the market wasn’t ready for it. As a result, the team had to pivot and focus on creating a web browser that could run Java applets.",
+          "class_name": "",
+          "m_class_name": ""
+        },
+        {
+          "type": "paragraph",
+          "paragraph_title": "5. No Market Need",
+          "text": "Evidently, the most common reason for startup failure is simply no market need for the product or service they’re offering.\n" +
+            "<br/><br/>This startup failure reason can be credited to the reverse process that most entrepreneurs follow while starting up.\n" +
+            "<br/><br/>Instead of –\n" +
+            "<br/><br/><b>Identifying the problem -> finding the solution -> building a product -> monetising it</b>" +
+            "<br/><br/>Entrepreneurs choose to follow this –\n" +
+            "<br/><br/><b>Building a product -> identifying a problem related to the product -> aligning the solution -> monetising it </b>" +
+            "<br/><br/>The problem with this process is that the entrepreneur might build something that no one needs or worse, something that already exists in the market.\n" +
+            "<br/><br/>Take this for example – when Google Glass was released, it was an innovative product that no one had seen before. However, even though the product was new and different, there wasn’t a large enough market for it. People didn’t want to wear glasses with a screen in them and it quickly became apparent that Google Glass would not be a successful product.\n" +
+            "<br/><br/>As a result, Google Glass failed.\n" +
+            "<br/><br/>To prevent this from happening, it’s important to ensure a market for the product or service before investing time and money into developing it.",
+          "class_name": "",
+          "m_class_name": ""
+        },
+
+      ]
     }
   ],
 }

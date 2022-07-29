@@ -44,14 +44,18 @@
       </v-col>
       <v-col sm="1" cols="12" :class="$vuetify.display.mobile?'text-center ':'text-right'">
         <div>
-          <v-btn variant="outlined" color="rgb(var(--v-theme-theme-stroke-2),0.8)" class="control-btn ma-2" @click="changeSlide('previous')">
+          <v-btn variant="outlined" color="rgb(var(--v-theme-theme-stroke-2),0.8)" class="control-btn ma-2"
+                 @click="changeSlide('previous')">
             <v-icon size="x-large">mdi-chevron-left</v-icon>
           </v-btn>
-          <v-btn variant="outlined"  color="rgb(var(--v-theme-theme-stroke-2),0.8)"  class="control-btn ma-2" @click="changeSlide('next')">
+          <v-btn variant="outlined" color="rgb(var(--v-theme-theme-stroke-2),0.8)" class="control-btn ma-2"
+                 @click="changeSlide('next')">
             <v-icon size="x-large">mdi-chevron-right</v-icon>
           </v-btn>
         </div>
       </v-col>
+
+
     </v-row>
   </div>
 </template>
@@ -84,19 +88,10 @@ export default {
       carousel: 0,
       testimonial_list: [
         {
-          img: "https://wp.xpeedstudio.com/sassico/wp-content/uploads/2019/10/Team-Image.jpg",
-          msg: "You can help customers in real-time across all of your channels from email, social, website, iOS, and Android apps.",
-          name: "Dr Om vijay Sahu",
-          designation: "Founder of Digital ayurveda",
-        }, {
-          img: "https://wp.xpeedstudio.com/sassico/wp-content/uploads/2019/10/Team-Image.jpg",
-          msg: "You can help customers in real-time across all of your channels from email, social, website, iOS, and Android apps.",
-          name: "Dr Om vijay Sahu",
-          designation: "Founder of Digital ayurveda",
-        }, {
-          img: "https://wp.xpeedstudio.com/sassico/wp-content/uploads/2019/10/Team-Image.jpg",
-          msg: "You can help customers in real-time across all of your channels from email, social, website, iOS, and Android apps.",
-          name: "Dr Om vijay Sahu",
+          img: require("@/assets/testimonial/omvijay.jpg"),
+          msg: "I would highly recommend Team Spidertech's services for Software development. The team at Spidertech worked diligently to create a website that has all of the\n" +
+              "features we needed to run a your business online.",
+          name: "Dr Om Vijay Sahoo",
           designation: "Founder of Digital ayurveda",
         }
       ]
