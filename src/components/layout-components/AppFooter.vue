@@ -131,7 +131,7 @@ export default {
   name: "AppFooter",
   data: () => ({
     footer: false,
-    contact_number: "+91 8839737938",
+    contact_number: "+91 8878957797",
     contact_email: "hello.spidertech@gmail.com",
     contact_list: [
       {

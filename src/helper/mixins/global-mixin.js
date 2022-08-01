@@ -36,17 +36,20 @@ export default {
     }
   },
   methods: {
-    // showSnakeBar(type = 'success', text) {
-    //   this.$store.dispatch('snackbar/setSnackbar', {
-    //     flag: true,
-    //     text,
-    //     color: type
-    //   })
-    // },
+    showSnakeBar(type = 'success', text) {
+      console.log("asd")
+      this.$store.dispatch('setSnackbar', {
+        flag: true,
+        text,
+        color: type
+      })
+    },
+    //page scroll to the id
     onLinkClick(id) {
       const SCROlL_ELM = document.getElementById(id)
       SCROlL_ELM.scrollIntoView({behavior: "smooth"});
     },
+    //toggle the loading screen
     toggleLoading() {
       this.$store.state.page_loading = true
       setTimeout(() => {

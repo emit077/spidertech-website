@@ -6,6 +6,7 @@
     </v-main>
     <app-footer/>
     <loading-screen/>
+    <snack-bar/>
   </v-app>
 </template>
 <style lang="scss">
@@ -19,13 +20,15 @@
 import AppBar from "@/components/layout-components/AppBar"
 import AppFooter from "@/components/layout-components/AppFooter"
 import LoadingScreen from "@/components/other/LoadingScreen"
+import SnackBar from "@/components/other/SnackBar"
 
 export default {
   name: 'App',
   components: {
     AppBar,
     AppFooter,
-    LoadingScreen
+    LoadingScreen,
+    SnackBar
   },
   data: () => ({
     //

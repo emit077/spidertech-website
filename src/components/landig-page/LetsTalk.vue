@@ -97,8 +97,8 @@
 
 <script>
 
-import {createUser} from "@/firebase-config";
 import {defineComponent,} from 'vue'
+import {createUser} from "@/firebase-config";
 
 export default defineComponent({
   name: 'LetsTalk',
@@ -128,7 +128,12 @@ export default defineComponent({
         description: this.description,
         date_time: new Date(),
       }
-      createUser(params)
+      createUser(params).then(function (response) {
+        this.$refs.contact_form.reset()
+        this.showSnakeBar('success', "your response has been recorded. We will get back to you as soon as possible")
+      }.bind(this)).catch(function (error) {
+        this.showSnakeBar('error', "Something went wrong, Please try again letter.")
+      }.bind(this))
     }
   }
 });
