@@ -77,10 +77,10 @@
 
     <v-divider color="rgb(var(--v-theme-surface),0.1)"></v-divider>
     <p class="text-caption text-center mt-4" style="color: rgb(var(--v-theme-surface),0.5)">
-      ©Spidertech-2022
+<!--      ©Spidertech-2022-->
     </p>
     <p class="text-caption text-center mt-1" style="color: rgb(var(--v-theme-surface),0.5)">
-      Designed and developed with ❤️ by
+      Designed & developed with ❤️ by
       Spidertech</p>
 
 
