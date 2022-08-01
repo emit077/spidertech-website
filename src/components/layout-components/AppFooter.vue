@@ -100,7 +100,8 @@
   }
 
   .social-icon:hover {
-    transform: scale(1.33);
+    transform: scale(1.35);
+    color: rgb(var(--v-theme-theme-stroke-3));
   }
 
   a {
