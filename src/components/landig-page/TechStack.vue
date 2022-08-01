@@ -1,12 +1,13 @@
 <template>
   <!--  <div :style="{ backgroundImage : 'url('+ require('@/assets/'+this.$vuetify.theme.global.name+'/codeBG.png')+')' }" class="tech-stack-card-wrapper">-->
-  <div class="tech-stack-card-wrapper">
-    <div class="app-padding py-15 justify-center text-center align-center">
-      <p class="text-h5 text-theme-stroke-2 mb-8 font-weight-bold">We are working with</p>
+  <div class="tech-stack-card-wrapper" :class="$vuetify.display.mobile?'':'py-15'">
+    <div class="app-padding py-15 justify-center text-center align-center" >
+      <p class="text-theme-stroke-2 font-weight-bold"
+      :class="$vuetify.display.mobile?'text-h5 mb-8 ':'text-h3 mb-15'">We are working with</p>
       <div v-for="(tech,i) in tech_stacks" :key="i" class="d-inline-flex tech-stack-card"
-           :class="$vuetify.display.mobile?'my-5':'my-8 '">
+           :class="$vuetify.display.mobile?'my-5':'my-8'">
         <div class="d-flex align-center justify-center elevation-1"
-             :class="$vuetify.display.mobile?' mx-2 px-3 ':' px-3 py-1 mx-4'">
+             :class="$vuetify.display.mobile?' mx-2 px-3 py-1 ':' px-3 py-2 mx-4'">
           <img :src="tech.img" alt="" :width="tech.width||40" class="">
           <span class="text-h5 mx-2 font-weight-light">|</span>
           <span class="tech-title">{{ tech.title }}</span>
