@@ -1,12 +1,13 @@
 <template>
   <div class="app-padding py-3 d-flex align-center" id="app-bar">
-    <div class="d-inline-flex w-25" v-if="header">
+    <div class="d-inline-flex align-center w-25" v-if="header">
       <router-link to="/" class="router-link">
-        <strong class="font-weight-bold text-theme-stroke-1" :class="$vuetify.display.mobile?'text-h6':'text-h4'">Spidertech</strong>
+        <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/header-logo.svg')" alt="logo" class="app-logo"
+             :width="$vuetify.display.mobile?130:'170'">
+        <!--        <strong class="font-weight-bold text-theme-stroke-1" :class="$vuetify.display.mobile?'text-h6':'text-h4'">Spidertech</strong>-->
       </router-link>
     </div>
-    <!--    <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/color-logo.svg')" alt="logo" class="app-logo"-->
-    <!--    :width="$vuetify.display.mobile?80:''">-->
+
 
     <!--  desktop  -->
     <div class="d-inline-block text-right w-75" v-if="header">
@@ -76,7 +77,7 @@
   backdrop-filter: blur(10px);
   transition-duration: 500ms;
   transform-origin: bottom;
-  background-color:  rgb(var(--v-theme-theme-fill-1));
+  background-color: rgb(var(--v-theme-theme-fill-1));
 
   .nav-link-theme1 {
     color: rgb(var(--v-theme-theme-stroke-2), 1);

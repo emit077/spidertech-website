@@ -1,16 +1,15 @@
 <template>
-  <v-footer app absolute class="text-white text-center footer-wrapper d-block bg-dark"
+  <v-footer app absolute class="text-white text-center footer-wrapper d-block bg-dark mt-n1"
             v-if="footer"
             :class="$vuetify.display.mobile?'py-0  ':'pt-10 pb-4'">
     <v-row justify="center" class=" py-10" no-gutters>
       <v-col md="3" cols="12" class="text-center py-5">
         <div class="px-5">
           <router-link to="/" class="router-link">
-            <strong class="font-weight-bold text-white"
-                    :class="$vuetify.display.mobile?'text-h4':'text-h4'">Spidertech</strong>
+            <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/footer-logo.svg')" alt="logo"
+                 class="app-logo">
+            <!-- <strong class="font-weight-bold text-white":class="$vuetify.display.mobile?'text-h4':'text-h4'">Spidertech</strong>-->
           </router-link>
-          <!--          <img :src="require('@/assets/'+this.$vuetify.theme.global.name+'/color-logo.svg')" alt="logo"-->
-          <!--               class="app-logo">-->
           <v-divider class="my-4" color="rgb(var(--v-theme-secondary2), 0.3)"></v-divider>
           <div class="d-inline-flex mx-2" v-for="(item,i) in contact_list" :key="i">
             <a :href="item.link" target="_blank" class="">
@@ -77,7 +76,7 @@
 
     <v-divider color="rgb(var(--v-theme-surface),0.1)"></v-divider>
     <p class="text-caption text-center mt-4" style="color: rgb(var(--v-theme-surface),0.5)">
-<!--      ©Spidertech-2022-->
+      <!--      ©Spidertech-2022-->
     </p>
     <p class="text-caption text-center mt-1" style="color: rgb(var(--v-theme-surface),0.5)">
       Designed & developed with ❤️ by
@@ -91,7 +90,7 @@
   background-color: #1F2020;
 
   .app-logo {
-    filter: grayscale(100%);
+    width: 75%;
   }
 
   .social-icon {

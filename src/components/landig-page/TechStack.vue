@@ -3,7 +3,7 @@
   <div class="tech-stack-card-wrapper" :class="$vuetify.display.mobile?'':'py-15'">
     <div class="app-padding py-15 justify-center text-center align-center" >
       <p class="text-theme-stroke-2 font-weight-bold"
-      :class="$vuetify.display.mobile?'text-h5 mb-8 ':'text-h3 mb-15'">We are working with</p>
+      :class="$vuetify.display.mobile?'text-h5 mb-8 ':'text-h4 mb-12'">We are working with</p>
       <div v-for="(tech,i) in tech_stacks" :key="i" class="d-inline-flex tech-stack-card"
            :class="$vuetify.display.mobile?'my-5':'my-8'">
         <div class="d-flex align-center justify-center elevation-1"
